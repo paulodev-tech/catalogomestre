@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>STARTWEAR — Vista sua personalidade</title>
+  <meta name="description" content="Descubra a curadoria STARTWEAR: streetwear, moda casual e peças contemporâneas para vestir sua personalidade.">
+  <meta name="keywords" content="moda, streetwear, roupas, moda masculina, moda feminina, STARTWEAR">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="STARTWEAR — Seu estilo. Suas regras.">
+  <meta property="og:description" content="Peças contemporâneas para quem transforma o básico em identidade.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1200&q=85">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="STARTWEAR — Vista sua personalidade">
+  <meta name="twitter:description" content="Streetwear e casual premium com atitude.">
+  <link rel="canonical" href="https://startwear-demo.example.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{paper:'#F7F6F2',ink:'#171717',lime:'#B6F36A'},fontFamily:{display:['Space Grotesk','sans-serif'],body:['Inter','sans-serif']}}}}</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root{--paper:#f7f6f2;--ink:#171717;--muted:#777;--line:#e8e7e2;--lime:#b6f36a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:#202020;font-family:Inter, sans-serif;-webkit-font-smoothing:antialiased}button,input,select,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{cursor:pointer}img{display:block;width:100%;object-fit:cover}::selection{background:var(--lime);color:var(--ink)}
+    .wrap{width:min(1280px,calc(100% - 48px));margin:auto}.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.065em}.eyebrow{font-size:10px;letter-spacing:.18em;font-weight:700;text-transform:uppercase}.muted{color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border:1px solid var(--ink);border-radius:6px;background:var(--ink);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;transition:.25s}.btn:hover{background:var(--lime);border-color:var(--lime);color:var(--ink);transform:translateY(-2px)}.btn-light{background:transparent;color:var(--ink)}.btn-light:hover{background:var(--ink);color:#fff}.icon-btn{width:42px;height:42px;display:grid;place-items:center;border:1px solid transparent;border-radius:50%;transition:.2s;position:relative}.icon-btn:hover{background:#eeede8}.topline{height:32px;background:var(--ink);color:white;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.topline span{color:var(--lime);margin-right:8px}.header{height:76px;position:sticky;top:0;z-index:30;background:rgba(247,246,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(232,231,226,.8)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.logo{font-family:'Space Grotesk';font-size:26px;font-weight:700;letter-spacing:-.09em;white-space:nowrap}.logo-mark{display:inline-block;width:8px;height:8px;background:var(--lime);border-radius:50%;margin-left:2px;vertical-align:top;margin-top:6px}.nav{display:flex;align-items:center;gap:27px}.nav a{font-size:11px;font-weight:600;transition:.2s}.nav a:hover{color:#6c9c32}.head-actions{display:flex;align-items:center;gap:5px}.bag-count{position:absolute;right:0;top:0;background:var(--lime);color:var(--ink);font-size:9px;font-weight:800;width:17px;height:17px;border-radius:50%;display:grid;place-items:center}.menu-toggle{display:none}.hero{padding:26px 0 78px}.hero-grid{display:grid;grid-template-columns:.92fr 1.08fr;min-height:580px;gap:24px}.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:46px 0 46px 5.5vw;position:relative}.hero-copy:before{content:'SW / 026';position:absolute;top:32px;left:5.5vw;font-size:9px;letter-spacing:.18em;color:#999}.hero h1{font-size:clamp(58px,7vw,94px);line-height:.91;margin:0 0 26px;font-weight:700}.hero h1 span{display:block}.hero h1 .outline{-webkit-text-stroke:1.5px var(--ink);color:transparent}.hero-copy p{max-width:390px;font-size:14px;line-height:1.8;color:#6f6f6b;margin:0 0 30px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.hero-note{margin-top:62px;display:flex;align-items:center;gap:12px;font-size:10px;color:#777;letter-spacing:.1em;text-transform:uppercase}.hero-note i{width:28px;height:1px;background:var(--lime)}.hero-image{position:relative;min-height:580px;overflow:hidden;border-radius:7px;background:#ddd}.hero-image img{height:100%;position:absolute;inset:0;transition:transform 1s}.hero-image:hover img{transform:scale(1.035)}.hero-image:after{content:'';position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.4))}.hero-caption{position:absolute;bottom:25px;left:26px;z-index:1;color:#fff;display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:.14em;text-transform:uppercase}.hero-caption b{background:var(--lime);color:var(--ink);padding:8px 10px}.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;white-space:nowrap}.ticker-track{display:flex;justify-content:space-around;gap:45px;font-family:'Space Grotesk';font-size:13px;font-weight:600;letter-spacing:.12em}.ticker em{font-style:normal;color:#8eae63}.section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1;margin:10px 0 0}.section-head p{font-size:12px;color:var(--muted);margin:0;max-width:270px;line-height:1.7}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category-card{height:370px;position:relative;overflow:hidden;border-radius:6px;background:#ddd}.category-card img{height:100%;transition:transform .7s}.category-card:hover img{transform:scale(1.06)}.category-card:after{content:'';position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.62))}.category-info{position:absolute;z-index:1;bottom:20px;left:20px;right:20px;color:white;display:flex;justify-content:space-between;align-items:end}.category-info h3{font:600 25px 'Space Grotesk';margin:0}.category-info span{width:34px;height:34px;border:1px solid #ffffff90;border-radius:50%;display:grid;place-items:center;transition:.2s}.category-card:hover .category-info span{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+    .products-section{background:#f0efea}.filter-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:28px 0 22px;flex-wrap:wrap}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{border:1px solid #dcdad3;background:transparent;border-radius:30px;padding:9px 15px;font-size:10px;font-weight:600;transition:.2s}.filter.active,.filter:hover{background:var(--ink);border-color:var(--ink);color:white}.product-tools{display:flex;gap:9px;align-items:center}.searchbox{height:39px;border:1px solid #deddd6;background:transparent;border-radius:5px;display:flex;align-items:center;padding:0 10px;gap:7px}.searchbox input{width:140px;border:0;outline:0;background:transparent;font-size:11px}.sort-select{height:39px;background:transparent;border:1px solid #deddd6;border-radius:5px;padding:0 10px;font-size:10px;outline:0}.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 14px}.product-card{min-width:0}.product-photo{position:relative;aspect-ratio: .78;overflow:hidden;border-radius:6px;background:#e3e1dc;cursor:pointer}.product-photo img{height:100%;transition:transform .6s}.product-card:hover .product-photo img{transform:scale(1.045)}.tag{position:absolute;top:12px;left:12px;background:var(--lime);padding:6px 8px;font-size:8px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.quick-add{position:absolute;bottom:12px;left:12px;right:12px;background:rgba(255,255,255,.95);border:0;border-radius:4px;height:42px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:0;transform:translateY(8px);transition:.25s}.product-card:hover .quick-add{opacity:1;transform:translateY(0)}.product-meta{padding:13px 2px 0}.product-meta .category-label{font-size:9px;color:#8b8a84;letter-spacing:.12em;text-transform:uppercase}.product-meta h3{font-size:13px;font-weight:600;margin:6px 0 7px}.price-line{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700}.old-price{font-size:10px;color:#999;text-decoration:line-through;font-weight:400}.swatches{display:flex;gap:5px;margin-top:10px}.swatch{width:11px;height:11px;border-radius:50%;border:1px solid #aaa}.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:#777;font-size:13px}
+    .benefits{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.benefit{padding:28px 22px;display:flex;gap:14px;align-items:flex-start;border-right:1px solid var(--line)}.benefit:last-child{border:0}.benefit-icon{width:36px;height:36px;display:grid;place-items:center;background:#edeee6;border-radius:50%;flex-shrink:0}.benefit h3{font-size:12px;margin:1px 0 6px}.benefit p{font-size:10px;line-height:1.6;color:#85847e;margin:0}
+    .campaign{background:#111;color:white;display:grid;grid-template-columns:1fr 1fr;min-height:490px}.campaign-image{position:relative;min-height:490px;overflow:hidden}.campaign-image img{height:100%;position:absolute;inset:0}.campaign-copy{display:flex;flex-direction:column;justify-content:center;padding:70px clamp(30px,7vw,110px)}.campaign-copy h2{font-size:clamp(42px,5.2vw,68px);line-height:.96;margin:18px 0 20px}.campaign-copy h2 span{color:var(--lime)}.campaign-copy p{color:#aaa;font-size:13px;line-height:1.8;max-width:350px;margin:0 0 28px}.campaign-copy .btn{align-self:flex-start;background:var(--lime);border-color:var(--lime);color:var(--ink)}.campaign-copy .btn:hover{background:white;border-color:white}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.review{background:white;padding:26px;border:1px solid var(--line);border-radius:6px}.stars{color:#779e45;letter-spacing:3px;font-size:12px}.review blockquote{font-family:'Space Grotesk';font-size:17px;line-height:1.5;margin:18px 0 25px}.reviewer{display:flex;align-items:center;gap:10px}.avatar{width:34px;height:34px;border-radius:50%;background:#e9eadf;display:grid;place-items:center;font:600 12px 'Space Grotesk'}.reviewer b{display:block;font-size:10px}.reviewer small{display:block;color:#999;font-size:9px;margin-top:3px}.demo-note{font-size:9px;color:#999;margin-top:14px}
+    .instagram{padding-top:25px}.insta-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px}.insta-grid a{aspect-ratio:1;overflow:hidden;border-radius:4px;background:#ddd}.insta-grid img{height:100%;transition:transform .5s}.insta-grid a:hover img{transform:scale(1.08)}.insta-cta{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.insta-cta h2{font-size:clamp(30px,4vw,42px);margin:8px 0 0}
+    .newsletter{background:var(--lime);padding:64px 0}.newsletter-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}.newsletter h2{font-size:clamp(34px,4vw,48px);line-height:1;margin:0 0 12px}.newsletter p{font-size:12px;margin:0;color:#47523c}.newsletter-form{display:flex;max-width:440px;width:100%;gap:8px}.newsletter-form input{height:49px;min-width:0;flex:1;padding:0 15px;border:1px solid #8ea65f;border-radius:5px;background:#ffffff9c;outline:0;font-size:12px}.newsletter-form .btn{background:var(--ink);border-color:var(--ink);white-space:nowrap}.newsletter-feedback{font-size:10px;margin-top:8px;min-height:14px}
+    footer{background:#111;color:white;padding:64px 0 22px}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px}.footer-brand p{max-width:260px;color:#929292;font-size:11px;line-height:1.8;margin:18px 0}.footer-title{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#999;margin-bottom:18px}.footer-links{display:grid;gap:12px}.footer-links a,.footer-links button{font-size:11px;color:#d0d0d0;text-align:left;background:none;border:0;padding:0}.footer-links a:hover,.footer-links button:hover{color:var(--lime)}.footer-bottom{border-top:1px solid #333;padding-top:18px;display:flex;justify-content:space-between;gap:15px;color:#777;font-size:9px;letter-spacing:.05em}.demo-strip{color:#b5b5b5}
+    .whatsapp-float{position:fixed;right:22px;bottom:25px;z-index:25;width:52px;height:52px;border-radius:50%;background:#1fbd68;color:white;display:grid;place-items:center;box-shadow:0 8px 25px #0002;transition:.2s}.whatsapp-float:hover{transform:translateY(-3px)}
+    .mobile-bottom{display:none}
+    .overlay{position:fixed;inset:0;background:#0008;z-index:60;opacity:0;visibility:hidden;transition:.25s}.overlay.open{opacity:1;visibility:visible}.drawer{position:fixed;z-index:61;top:0;right:0;height:100dvh;width:min(460px,100%);background:var(--paper);transform:translateX(100%);transition:transform .32s;display:flex;flex-direction:column}.drawer.open{transform:translateX(0)}.drawer-head{padding:22px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.drawer-content{padding:20px 24px;overflow:auto;flex:1}.drawer-foot{padding:20px 24px calc(20px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--paper)}.cart-item{display:grid;grid-template-columns:74px 1fr auto;gap:13px;padding:14px 0;border-bottom:1px solid var(--line)}.cart-item img{height:92px;border-radius:4px}.cart-item h4{font-size:12px;margin:3px 0 5px}.cart-item p{font-size:10px;color:#888;margin:0 0 7px}.qty{display:flex;align-items:center;gap:10px;margin-top:9px}.qty button{border:1px solid var(--line);background:white;width:25px;height:25px;border-radius:3px}.remove{background:none;border:0;color:#999;padding:4px}.progress-track{height:4px;background:#e5e4dc;border-radius:5px;margin:12px 0 7px;overflow:hidden}.progress-fill{height:100%;background:#9bc94f;width:0;transition:width .3s}.summary-row{display:flex;justify-content:space-between;font-size:11px;margin:9px 0}.summary-row.total{font-size:15px;font-weight:700;padding-top:10px;border-top:1px solid var(--line)}.drawer .btn{width:100%}
+    .modal-wrap{position:fixed;inset:0;z-index:80;display:grid;place-items:center;padding:20px;opacity:0;visibility:hidden;transition:.25s}.modal-wrap.open{opacity:1;visibility:visible}.modal-backdrop{position:absolute;inset:0;background:#0009}.modal{position:relative;z-index:1;background:var(--paper);width:min(850px,100%);max-height:min(90dvh,850px);overflow:auto;border-radius:12px;transform:translateY(12px) scale(.985);transition:.25s}.modal-wrap.open .modal{transform:none}.modal-close{position:absolute;right:14px;top:14px;z-index:3;background:#ffffffdd}.product-modal-grid{display:grid;grid-template-columns:1fr 1fr}.product-modal-image{min-height:540px;background:#e4e2dc}.product-modal-image img{height:100%;min-height:540px}.product-modal-info{padding:54px 38px 35px}.product-modal-info h2{font:600 32px 'Space Grotesk';letter-spacing:-.05em;line-height:1.1;margin:12px 0}.product-modal-info .description{font-size:12px;line-height:1.8;color:#777;margin:18px 0 22px}.option-label{font-size:9px;letter-spacing:.12em;font-weight:700;text-transform:uppercase;margin:20px 0 10px;display:block}.option-list{display:flex;gap:8px;flex-wrap:wrap}.option-btn{min-width:40px;height:38px;padding:0 12px;border:1px solid #d8d6cf;background:transparent;border-radius:4px;font-size:10px}.option-btn.selected{border-color:var(--ink);background:var(--ink);color:white}.option-btn.color-option{min-width:36px;width:36px;padding:0;border-radius:50%;height:36px;position:relative}.option-btn.color-option.selected:after{content:'✓';position:absolute;inset:0;display:grid;place-items:center;color:white;text-shadow:0 1px 3px #000}.modal-buy{display:flex;gap:9px;margin-top:25px}.quantity-input{display:flex;align-items:center;border:1px solid var(--line);border-radius:5px}.quantity-input button{width:35px;border:0;background:transparent}.quantity-input span{width:20px;text-align:center;font-size:12px}.modal-buy .btn{flex:1}.availability{font-size:10px;color:#668b36;margin-top:14px}
+    .checkout-modal{width:min(600px,100%);padding:32px}.checkout-modal h2,.policy-modal h2{font:600 30px 'Space Grotesk';letter-spacing:-.05em;margin:0 0 8px}.checkout-modal>p,.policy-modal p{font-size:11px;color:#777;line-height:1.7}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.field input,.field select,.field textarea{width:100%;height:42px;border:1px solid #deddd6;border-radius:4px;background:white;padding:0 11px;font-size:11px;outline-color:#9fc95c}.field textarea{height:70px;padding:10px;resize:vertical}.checkout-modal .btn{width:100%}.policy-modal{width:min(650px,100%);padding:38px;max-height:85dvh;overflow:auto}.policy-modal h3{font-size:13px;margin:22px 0 8px}.policy-modal p{font-size:12px}.toast{position:fixed;z-index:100;left:50%;bottom:95px;transform:translate(-50%,20px);background:var(--ink);color:white;padding:13px 18px;border-radius:5px;font-size:11px;opacity:0;visibility:hidden;transition:.25s;box-shadow:0 8px 30px #0002}.toast.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+    .mobile-menu{position:fixed;inset:0;z-index:55;background:var(--paper);padding:22px 24px;transform:translateX(-100%);transition:.3s;display:flex;flex-direction:column}.mobile-menu.open{transform:translateX(0)}.mobile-menu nav{display:grid;gap:0;margin-top:45px}.mobile-menu nav a{padding:19px 0;border-bottom:1px solid var(--line);font:600 27px 'Space Grotesk';letter-spacing:-.04em}.mobile-menu .menu-top{display:flex;justify-content:space-between;align-items:center}.mobile-menu .menu-bottom{margin-top:auto;color:#888;font-size:10px}
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:1000px){.nav{gap:15px}.nav a{font-size:10px}.hero-copy{padding-left:2vw}.hero-copy:before{left:2vw}.hero-grid{min-height:500px}.hero-image{min-height:500px}.product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.category-card{height:310px}.benefit{padding:23px 14px}}
+    @media(max-width:760px){.wrap{width:calc(100% - 36px)}.topline{font-size:8px;height:30px}.header{height:64px}.nav{display:none}.menu-toggle{display:grid}.logo{font-size:24px}.head-actions{gap:0}.hero{padding:12px 0 45px}.hero-grid{grid-template-columns:1fr;gap:18px;min-height:0}.hero-copy{padding:53px 4px 8px}.hero-copy:before{top:18px;left:4px}.hero h1{font-size:clamp(57px,13vw,78px);margin-bottom:18px}.hero-copy p{font-size:12px;max-width:340px;margin-bottom:22px}.hero-note{margin-top:28px}.hero-image{min-height:430px;height:112vw;max-height:540px}.hero-caption{left:17px;bottom:17px;font-size:8px}.ticker{padding:13px 0}.ticker-track{justify-content:flex-start;gap:28px;font-size:11px;animation:marquee 24s linear infinite;width:max-content}@keyframes marquee{to{transform:translateX(-30%)}}.section{padding:62px 0}.section-head{align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:23px}.section-head h2{font-size:35px}.section-head p{max-width:330px}.categories{grid-template-columns:repeat(2,1fr);gap:9px}.category-card{height:auto;aspect-ratio:.78}.category-info{left:13px;right:13px;bottom:13px}.category-info h3{font-size:21px}.category-info span{width:30px;height:30px}.products-section{padding:60px 0}.filter-row{margin:20px 0 17px;align-items:stretch}.filters{flex-wrap:nowrap;overflow-x:auto;width:100%;padding-bottom:5px;scrollbar-width:none}.filters::-webkit-scrollbar{display:none}.filter{white-space:nowrap;padding:9px 13px}.product-tools{width:100%}.searchbox{flex:1}.searchbox input{width:100%;min-width:0}.sort-select{max-width:145px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 10px}.product-photo{aspect-ratio:.73}.quick-add{opacity:1;transform:none;height:36px;bottom:8px;left:8px;right:8px;font-size:9px}.tag{top:8px;left:8px}.product-meta{padding-top:10px}.product-meta h3{font-size:11px;line-height:1.4}.price-line{font-size:11px}.swatches{margin-top:7px}.benefits{grid-template-columns:1fr 1fr}.benefit{padding:19px 12px;border-bottom:1px solid var(--line)}.benefit:nth-child(2){border-right:0}.benefit:nth-child(3),.benefit:nth-child(4){border-bottom:0}.benefit-icon{width:32px;height:32px}.benefit h3{font-size:10px}.benefit p{font-size:9px}.campaign{grid-template-columns:1fr}.campaign-image{min-height:370px}.campaign-copy{padding:46px 28px 52px}.campaign-copy h2{font-size:48px}.reviews{grid-template-columns:1fr;gap:10px}.review{padding:22px}.review blockquote{font-size:16px;margin:13px 0 20px}.insta-cta{align-items:flex-start;flex-direction:column;gap:15px}.insta-grid{grid-template-columns:repeat(3,1fr);gap:6px}.newsletter{padding:48px 0}.newsletter-inner{display:block}.newsletter h2{font-size:38px}.newsletter-form{margin-top:23px}.newsletter-form .btn{padding:0 14px;font-size:9px}.footer-grid{grid-template-columns:1fr 1fr;gap:32px 20px;padding-bottom:35px}.footer-brand{grid-column:1/-1}.footer-bottom{flex-direction:column;gap:9px;padding-bottom:65px}.whatsapp-float{right:15px;bottom:82px;width:46px;height:46px}.mobile-bottom{position:fixed;z-index:35;bottom:0;left:0;right:0;display:grid;grid-template-columns:repeat(4,1fr);padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(247,246,242,.96);backdrop-filter:blur(14px);border-top:1px solid var(--line)}.mobile-bottom a,.mobile-bottom button{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;color:#888;font-size:8px;background:none;border:0}.mobile-bottom .active{color:var(--ink)}.mobile-bottom .active i{color:#6d9939}.product-modal-grid{grid-template-columns:1fr}.product-modal-image{min-height:0;height:48vh;max-height:390px}.product-modal-image img{min-height:0;height:100%}.product-modal-info{padding:27px 22px 25px}.product-modal-info h2{font-size:27px}.modal-wrap{padding:10px}.modal{max-height:94dvh;border-radius:9px}.modal-close{top:9px;right:9px;background:#ffffffed}.checkout-modal,.policy-modal{padding:26px 20px}.form-grid{gap:10px}.field input,.field select{height:40px}.drawer{width:100%}.toast{bottom:85px}.mobile-menu nav a{font-size:25px}}
+    @media(max-width:390px){.wrap{width:calc(100% - 30px)}.hero h1{font-size:55px}.hero-image{min-height:390px}.product-tools{gap:6px}.sort-select{max-width:125px;padding:0 6px;font-size:9px}.searchbox{padding:0 7px}.searchbox input{font-size:10px}.category-info h3{font-size:18px}.benefit{gap:9px;padding:16px 8px}.benefit-icon{width:29px;height:29px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+    /* STARTWEAR EXPERIENCE UPGRADE */
+    :root{--ease:cubic-bezier(.22,.68,0,1.05)}
+    .header{transition:box-shadow .25s,background .25s}.header.scrolled{box-shadow:0 8px 30px #1717170b;background:rgba(247,246,242,.97)}
+    .hero-image img{transition:opacity .45s,transform 1.1s}.hero-image img.is-changing{opacity:.18;transform:scale(1.035)}
+    .hero-controls{position:absolute;z-index:3;right:22px;bottom:20px;display:flex;align-items:center;gap:7px}.hero-dot{width:7px;height:7px;border:0;border-radius:50%;padding:0;background:#ffffff80;transition:.25s}.hero-dot.active{width:24px;border-radius:9px;background:var(--lime)}.hero-pause{width:30px;height:30px;border:1px solid #ffffff80;border-radius:50%;background:#1115;color:white;display:grid;place-items:center;margin-left:5px}
+    .favorite-head{position:relative}.favorite-count{position:absolute;right:-1px;top:0;background:#171717;color:white;border:2px solid var(--paper);font-size:8px;font-weight:800;min-width:16px;height:16px;padding:0 3px;border-radius:20px;display:grid;place-items:center}
+    .product-photo{isolation:isolate}.product-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#00000008,transparent 28%);pointer-events:none}.favorite-toggle{position:absolute;z-index:2;right:11px;top:11px;width:36px;height:36px;border:0;border-radius:50%;background:#ffffffed;display:grid;place-items:center;transition:.22s}.favorite-toggle:hover{transform:scale(1.08);background:var(--lime)}.favorite-toggle.active{color:#b53a48}.favorite-toggle.active svg{fill:#b53a48;stroke:#b53a48}.product-card{transition:transform .35s var(--ease)}.product-card:hover{transform:translateY(-3px)}.product-meta h3{letter-spacing:-.02em}.product-rating{display:flex;align-items:center;gap:5px;color:#a17a35;font-size:9px;margin-top:7px}.product-rating span{color:#999}.stock-note{font-size:9px;color:#888;margin-top:7px}.stock-note strong{color:#6c8d3b;font-weight:600}
+    .recent-section{padding:52px 0 68px;background:#f7f6f2}.recent-track{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.recent-card{display:flex;align-items:center;gap:12px;min-width:0;background:white;padding:10px;border:1px solid var(--line);border-radius:7px;cursor:pointer;text-align:left}.recent-card img{width:62px;height:76px;border-radius:4px;flex:none}.recent-card b{font-size:11px;line-height:1.4;display:block}.recent-card small{display:block;color:#888;font-size:10px;margin-top:5px}
+    .quick-search{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;padding:12vh 20px 20px;background:#1119;backdrop-filter:blur(5px)}.quick-search.open{display:flex}.quick-search-panel{width:min(650px,100%);background:var(--paper);border-radius:12px;padding:22px;box-shadow:0 25px 90px #0003;animation:popIn .25s var(--ease)}.quick-search-top{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px}.quick-search-top input{border:0;background:transparent;outline:0;flex:1;min-width:0;font-size:17px}.quick-search-results{max-height:55vh;overflow:auto;padding-top:12px}.quick-result{display:flex;align-items:center;gap:13px;padding:9px;border-radius:6px;cursor:pointer}.quick-result:hover{background:#ecebe5}.quick-result img{width:48px;height:58px;object-fit:cover;border-radius:4px}.quick-result b{font-size:12px}.quick-result small{display:block;color:#888;font-size:10px;margin-top:4px}.quick-empty{padding:28px 10px;text-align:center;color:#888;font-size:12px}
+    .back-top{position:fixed;z-index:25;right:22px;bottom:90px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#fff;color:var(--ink);display:grid;place-items:center;box-shadow:0 6px 22px #00000012;opacity:0;visibility:hidden;transform:translateY(8px);transition:.25s}.back-top.visible{opacity:1;visibility:visible;transform:none}.whatsapp-float{transition:transform .2s,box-shadow .2s}.whatsapp-float:hover{transform:translateY(-4px);box-shadow:0 12px 30px #25d36655}
+    .toast{box-shadow:0 12px 35px #0002}.toast.show{animation:toastIn .28s var(--ease)}@keyframes toastIn{from{opacity:0;transform:translate(-50%,12px)}to{opacity:1;transform:translate(-50%,0)}}@keyframes popIn{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+    .filter-count{font-size:9px;opacity:.65;margin-left:4px}.filter[data-filter="Favoritos"]{border-style:dashed}.filter[data-filter="Favoritos"].active{border-style:solid}
+    .product-modal-info .size-guide{display:inline-flex;margin-left:12px;border:0;border-bottom:1px solid #aaa;background:transparent;color:#777;font-size:9px;padding:0 0 2px}
+    @media(max-width:900px){.recent-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.recent-section{padding:38px 0 48px}.recent-track{grid-template-columns:1fr 1fr;gap:8px}.recent-card{padding:7px;gap:8px}.recent-card img{width:48px;height:62px}.recent-card b{font-size:9px}.recent-card small{font-size:9px}.hero-controls{right:14px;bottom:14px}.quick-search{padding-top:7vh}.quick-search-panel{padding:16px}.back-top{right:14px;bottom:82px;width:38px;height:38px}.favorite-toggle{width:33px;height:33px}.product-photo .quick-add{opacity:1;transform:none;left:9px;right:9px;bottom:9px;height:36px;font-size:9px;background:#fffffff0}}
+
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ClothingStore","name":"STARTWEAR","description":"Loja demonstrativa de moda urbana, streetwear e casual premium.","url":"https://startwear-demo.example.com/","telephone":"+55-33-98888-2026","priceRange":"R$ 69,90 - R$ 249,90","address":{"@type":"PostalAddress","streetAddress":"Rua Doutor João Pinheiro, 125, Centro","addressLocality":"Raul Soares","addressRegion":"MG","postalCode":"35350-000","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"13:00"}]}
+  </script>
+</head>
+<body>
+  <div class="topline"><span>●</span> FRETE GRÁTIS EM COMPRAS ACIMA DE R$ 299</div>
+  <header class="header">
+    <div class="wrap header-inner">
+      <button class="icon-btn menu-toggle" id="openMenu" aria-label="Abrir menu"><i data-lucide="menu"></i></button>
+      <a class="logo" href="#inicio" aria-label="STARTWEAR início">STARTWEAR<span class="logo-mark"></span></a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a><a href="#produtos" data-filter-link="Masculino">Masculino</a><a href="#produtos" data-filter-link="Feminino">Feminino</a><a href="#produtos" data-filter-link="Streetwear">Streetwear</a><a href="#produtos" data-filter-link="Novidades">Novidades</a><a href="#produtos" data-filter-link="Ofertas">Ofertas</a>
+      </nav>
+      <div class="head-actions">
+        <button class="icon-btn" id="searchFocus" aria-label="Buscar produtos"><i data-lucide="search"></i></button>
+        <button class="icon-btn favorite-head" id="showFavorites" aria-label="Ver favoritos"><i data-lucide="heart"></i><span class="favorite-count" id="favoriteCount">0</span></button>
+        <button class="icon-btn" id="openCart" aria-label="Abrir sacola"><i data-lucide="shopping-bag"></i><span class="bag-count" id="bagCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Nova coleção / 2026</div>
+          <h1 class="display"><span>SEU ESTILO.</span><span class="outline">SUAS REGRAS.</span></h1>
+          <p>Vista sua personalidade. Descubra peças que acompanham seu ritmo e transformam o básico em identidade.</p>
+          <div class="hero-actions"><a class="btn" href="#produtos">Explorar coleção <i data-lucide="arrow-up-right" size="15"></i></a><a class="btn btn-light" href="#categorias">Ver novidades</a></div>
+          <div class="hero-note"><i></i> Curadoria urbana para todos os dias</div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1200&q=88" alt="Editorial de moda urbana com looks contemporâneos" fetchpriority="high" width="1200" height="1500">
+          <div class="hero-caption"><b id="heroDrop">DROP 01 — 26</b> <span id="heroCaption">Everyday, elevated.</span></div><div class="hero-controls" aria-label="Controles da campanha"><button class="hero-dot active" data-slide="0" aria-label="Campanha 1"></button><button class="hero-dot" data-slide="1" aria-label="Campanha 2"></button><button class="hero-dot" data-slide="2" aria-label="Campanha 3"></button><button class="hero-pause" id="heroPause" aria-label="Pausar apresentação"><i data-lucide="pause" size="12"></i></button></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Manifesto STARTWEAR"><div class="ticker-track"><span>WEAR YOUR ATTITUDE <em>✳</em></span><span>BUILT FOR EVERYDAY <em>✳</em></span><span>YOUR STYLE. YOUR RULES. <em>✳</em></span><span>WEAR YOUR ATTITUDE <em>✳</em></span></div></div>
+
+    <section class="section" id="categorias">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">Encontre sua expressão</div><h2 class="display">EXPLORE SEU ESTILO</h2></div><p>Uma curadoria que acompanha sua rotina e deixa espaço para você ser quem é.</p></div>
+        <div class="categories">
+          <a href="#produtos" class="category-card reveal" data-category="Masculino"><img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=700&q=82" alt="Moda masculina urbana" loading="lazy" width="700" height="900"><div class="category-info"><h3>Masculino</h3><span><i data-lucide="arrow-up-right"></i></span></div></a>
+          <a href="#produtos" class="category-card reveal" data-category="Feminino"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700&q=82" alt="Moda feminina contemporânea" loading="lazy" width="700" height="900"><div class="category-info"><h3>Feminino</h3><span><i data-lucide="arrow-up-right"></i></span></div></a>
+          <a href="#produtos" class="category-card reveal" data-category="Streetwear"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=700&q=82" alt="Streetwear e tendências urbanas" loading="lazy" width="700" height="900"><div class="category-info"><h3>Streetwear</h3><span><i data-lucide="arrow-up-right"></i></span></div></a>
+          <a href="#produtos" class="category-card reveal" data-category="Acessórios"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?w=700&q=82" alt="Acessórios de moda" loading="lazy" width="700" height="900"><div class="category-info"><h3>Acessórios</h3><span><i data-lucide="arrow-up-right"></i></span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="produtos">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">Escolhas da temporada</div><h2 class="display">PEÇAS QUE FALAM<br>POR VOCÊ</h2></div><p>Uma seleção especial para elevar seu visual. Design, conforto e personalidade em cada detalhe.</p></div>
+        <div class="filter-row">
+          <div class="filters" id="filters" aria-label="Filtros de produtos">
+            <button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Masculino">Masculino</button><button class="filter" data-filter="Feminino">Feminino</button><button class="filter" data-filter="Camisetas">Camisetas</button><button class="filter" data-filter="Calças">Calças</button><button class="filter" data-filter="Moletons">Moletons</button><button class="filter" data-filter="Jaquetas">Jaquetas</button><button class="filter" data-filter="Acessórios">Acessórios</button><button class="filter" data-filter="Streetwear">Streetwear</button><button class="filter" data-filter="Novidades">Novidades</button><button class="filter" data-filter="Ofertas">Ofertas</button><button class="filter" data-filter="Favoritos">♡ Favoritos <span class="filter-count" id="favoritesFilterCount">0</span></button>
+          </div>
+          <div class="product-tools"><label class="searchbox"><i data-lucide="search" size="14"></i><input id="productSearch" type="search" placeholder="Buscar peças..." aria-label="Buscar produtos"></label><select class="sort-select" id="sortProducts" aria-label="Ordenar produtos"><option value="featured">Em destaque</option><option value="low">Menor preço</option><option value="high">Maior preço</option><option value="new">Novidades</option></select></div>
+        </div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+        <div style="text-align:center;margin-top:35px"><span class="eyebrow muted">Feito para acompanhar seu ritmo</span></div>
+      </div>
+    </section>
+
+    <section class="recent-section" id="recentSection" hidden><div class="wrap"><div class="section-head"><div><div class="eyebrow">Continue de onde parou</div><h2 class="display" style="font-size:clamp(25px,3vw,34px)">VISTOS RECENTEMENTE</h2></div><button class="filter" id="clearRecent">Limpar histórico</button></div><div class="recent-track" id="recentTrack"></div></div></section>
+
+    <section class="wrap benefits reveal" aria-label="Benefícios">
+      <div class="benefit"><div class="benefit-icon"><i data-lucide="badge-check" size="17"></i></div><div><h3>Qualidade selecionada</h3><p>Curadoria de peças e materiais pensados para durar.</p></div></div>
+      <div class="benefit"><div class="benefit-icon"><i data-lucide="package" size="17"></i></div><div><h3>Entrega para todo o Brasil</h3><p>Receba seu próximo look onde estiver.</p></div></div>
+      <div class="benefit"><div class="benefit-icon"><i data-lucide="message-circle" size="17"></i></div><div><h3>Atendimento personalizado</h3><p>Converse com a gente e tire suas dúvidas.</p></div></div>
+      <div class="benefit"><div class="benefit-icon"><i data-lucide="zap" size="17"></i></div><div><h3>Compra fácil pelo WhatsApp</h3><p>Monte sua sacola e finalize em poucos passos.</p></div></div>
+    </section>
+
+    <section class="campaign" style="margin-top:92px">
+      <div class="campaign-image"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1200&q=85" alt="Campanha editorial de moda e atitude" loading="lazy" width="1200" height="1000"></div>
+      <div class="campaign-copy"><div class="eyebrow" style="color:var(--lime)">Não é sobre seguir</div><h2 class="display">MAIS QUE ROUPA.<br><span>É IDENTIDADE.</span></h2><p>Cada peça carrega uma atitude. Descubra uma coleção feita para quem não precisa seguir padrões.</p><a class="btn" href="#produtos">Descubra a STARTWEAR <i data-lucide="arrow-up-right" size="15"></i></a></div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">Quem veste, sente</div><h2 class="display">DO NOSSO JEITO.</h2></div><p>Uma boa escolha muda o jeito de chegar. E o jeito de se sentir.</p></div>
+        <div class="reviews">
+          <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“O caimento é muito bom e a peça tem aquele visual que funciona com tudo. Já entrou para os meus favoritos.”</blockquote><div class="reviewer"><div class="avatar">LM</div><div><b>Lucas M.</b><small>Cliente demonstrativo</small></div></div></article>
+          <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“Curti demais a proposta da loja. Peças estilosas, sem complicação, e atendimento que deixa tudo mais fácil.”</blockquote><div class="reviewer"><div class="avatar">AC</div><div><b>Ana C.</b><small>Cliente demonstrativa</small></div></div></article>
+          <article class="review reveal"><div class="stars">★★★★★</div><blockquote>“A camiseta tem um tecido ótimo e veste do jeito que eu gosto. Com certeza vou acompanhar os próximos drops.”</blockquote><div class="reviewer"><div class="avatar">RF</div><div><b>Rafael F.</b><small>Cliente demonstrativo</small></div></div></article>
+        </div>
+        <p class="demo-note">* Depoimentos, nomes e avaliação 4,9/5 (127 avaliações) são fictícios e utilizados exclusivamente para esta demonstração.</p>
+      </div>
+    </section>
+
+    <section class="section instagram">
+      <div class="wrap">
+        <div class="insta-cta reveal"><div><div class="eyebrow">Inspiração no feed</div><h2 class="display">SIGA NOSSO ESTILO</h2><div class="muted" style="font-size:12px;margin-top:8px">@startwear.store</div></div><a class="btn btn-light" href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener">Acompanhe no Instagram <i data-lucide="instagram" size="15"></i></a></div>
+        <div class="insta-grid">
+          <a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener" aria-label="Ver inspiração de moda no Instagram"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=450&q=78" alt="Look urbano editorial" loading="lazy" width="450" height="450"></a>
+          <a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener" aria-label="Ver inspiração de moda no Instagram"><img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=450&q=78" alt="Seleção de roupas contemporâneas" loading="lazy" width="450" height="450"></a>
+          <a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener" aria-label="Ver inspiração de moda no Instagram"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=450&q=78" alt="Editorial de moda feminina" loading="lazy" width="450" height="450"></a>
+          <a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener" aria-label="Ver inspiração de moda no Instagram"><img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=450&q=78" alt="Moda masculina urbana" loading="lazy" width="450" height="450"></a>
+          <a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener" aria-label="Ver inspiração de moda no Instagram"><img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=450&q=78" alt="Campanha de moda" loading="lazy" width="450" height="450"></a>
+          <a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener" aria-label="Ver inspiração de moda no Instagram"><img src="https://images.unsplash.com/photo-1521369909029-2afed882baee?w=450&q=78" alt="Acessórios urbanos" loading="lazy" width="450" height="450"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="wrap newsletter-inner"><div><div class="eyebrow">Receba primeiro</div><h2 class="display">FIQUE POR DENTRO.</h2><p>Receba novidades, lançamentos e ofertas exclusivas.</p></div><div style="max-width:440px;width:100%"><form class="newsletter-form" id="newsletterForm"><label class="sr-only" for="newsletterEmail" style="position:absolute;left:-9999px">Seu e-mail</label><input id="newsletterEmail" type="email" placeholder="Seu melhor e-mail" required><button class="btn" type="submit">Quero receber <i data-lucide="arrow-right" size="14"></i></button></form><div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="#inicio">STARTWEAR<span class="logo-mark"></span></a><p>Moda contemporânea para quem transforma atitude em identidade. Vista o que faz sentido para você.</p><div class="eyebrow" style="color:var(--lime)">Seu estilo. Suas regras.</div></div>
+        <div><div class="footer-title">Navegue</div><div class="footer-links"><a href="#inicio">Início</a><a href="#categorias">Categorias</a><a href="#produtos">Coleção</a><a href="#produtos" data-filter-link="Ofertas">Ofertas</a><a href="#instagram">Instagram</a></div></div>
+        <div><div class="footer-title">Atendimento</div><div class="footer-links"><button data-policy="trocas">Trocas e devoluções</button><button data-policy="privacidade">Política de privacidade</button><a href="https://wa.me/5533988882026" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.instagram.com/startwear.store/" target="_blank" rel="noopener">Instagram</a></div></div>
+        <div><div class="footer-title">Fale com a gente</div><div class="footer-links"><span>(33) 98888-2026</span><span>Rua Doutor João Pinheiro, 125<br>Centro, Raul Soares - MG</span><span>Seg–Sex: 09h às 18h<br>Sábado: 09h às 13h<br>Domingo: fechado</span></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 STARTWEAR. Todos os direitos reservados.</span><span class="demo-strip">VERSÃO DE DEMONSTRAÇÃO INTERATIVA • SEU NEGÓCIO PRONTO EM ATÉ 24H</span><span>Feito para vestir ideias.</span></div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5533988882026?text=Ol%C3%A1%21%20Vim%20pelo%20site%20STARTWEAR." target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"><i data-lucide="message-circle" size="23"></i></a>
+
+  <nav class="mobile-bottom" aria-label="Atalhos mobile">
+    <a href="#inicio" class="active"><i data-lucide="house" size="18"></i>Início</a>
+    <button id="mobileSearch"><i data-lucide="search" size="18"></i>Buscar</button>
+    <a href="#categorias"><i data-lucide="grid-2x2" size="18"></i>Categorias</a>
+    <button id="mobileCart"><i data-lucide="shopping-bag" size="18"></i>Sacola</button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="menu-top"><a class="logo" href="#inicio">STARTWEAR<span class="logo-mark"></span></a><button class="icon-btn" id="closeMenu" aria-label="Fechar menu"><i data-lucide="x"></i></button></div>
+    <nav><a href="#inicio">Início</a><a href="#produtos" data-filter-link="Masculino">Masculino</a><a href="#produtos" data-filter-link="Feminino">Feminino</a><a href="#produtos" data-filter-link="Streetwear">Streetwear</a><a href="#produtos" data-filter-link="Novidades">Novidades</a><a href="#produtos" data-filter-link="Ofertas">Ofertas</a></nav>
+    <div class="menu-bottom">STARTWEAR — YOUR STYLE. YOUR RULES.</div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Sua sacola" aria-hidden="true">
+    <div class="drawer-head"><div><div class="eyebrow">Sua seleção</div><h2 class="display" style="font-size:26px;margin:4px 0 0">SACOLA <span id="cartItemCount">(0)</span></h2></div><button class="icon-btn" id="closeCart" aria-label="Fechar sacola"><i data-lucide="x"></i></button></div>
+    <div class="drawer-content"><div id="cartItems"></div><div id="cartEmpty" style="text-align:center;padding:55px 10px"><i data-lucide="shopping-bag" size="32" style="color:#aaa;margin:auto"></i><h3 class="display" style="font-size:21px;margin:17px 0 6px">SUA SACOLA ESTÁ VAZIA</h3><p class="muted" style="font-size:11px">Explore a coleção e encontre sua próxima peça favorita.</p><button class="btn" id="continueShopping" style="margin-top:15px">Explorar produtos</button></div></div>
+    <div class="drawer-foot" id="cartFoot" hidden><div id="shippingMessage" style="font-size:10px"></div><div class="progress-track"><div class="progress-fill" id="shippingProgress"></div></div><div class="summary-row"><span>Subtotal</span><b id="cartSubtotal">R$ 0,00</b></div><div class="summary-row"><span>Frete demonstrativo</span><b id="cartShipping">R$ 14,90</b></div><div class="summary-row total"><span>Total</span><b id="cartTotal">R$ 0,00</b></div><button class="btn" id="checkoutButton">Finalizar pelo WhatsApp <i data-lucide="arrow-up-right" size="15"></i></button><p style="font-size:9px;color:#999;text-align:center;margin:10px 0 0">Pedido sujeito à confirmação de disponibilidade e condições.</p></div>
+  </aside>
+
+  <div class="modal-wrap" id="productModal" role="dialog" aria-modal="true" aria-label="Detalhes do produto">
+    <div class="modal-backdrop" data-close-modal></div><div class="modal"><button class="icon-btn modal-close" data-close-modal aria-label="Fechar"><i data-lucide="x"></i></button><div id="productModalContent"></div></div>
+  </div>
+  <div class="modal-wrap" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Finalizar pedido">
+    <div class="modal-backdrop" data-close-modal></div><div class="modal checkout-modal"><button class="icon-btn modal-close" data-close-modal aria-label="Fechar"><i data-lucide="x"></i></button><div class="eyebrow">Só mais um passo</div><h2>SEUS DADOS</h2><p>Preencha os dados para montar sua mensagem de pedido. A confirmação será feita diretamente pelo WhatsApp.</p>
+      <form id="checkoutForm"><div class="form-grid">
+        <div class="field full"><label for="customerName">Nome completo *</label><input id="customerName" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="customerCity">Cidade *</label><input id="customerCity" name="city" value="Raul Soares - MG" required></div>
+        <div class="field"><label for="customerDistrict">Bairro *</label><input id="customerDistrict" name="district" required></div>
+        <div class="field"><label for="customerAddress">Endereço *</label><input id="customerAddress" name="address" autocomplete="street-address" required></div>
+        <div class="field"><label for="customerNumber">Número *</label><input id="customerNumber" name="number" required></div>
+        <div class="field"><label for="customerComplement">Complemento</label><input id="customerComplement" name="complement"></div>
+        <div class="field"><label for="paymentMethod">Forma de pagamento *</label><select id="paymentMethod" name="payment" required><option value="Pix">Pix</option><option value="Dinheiro">Dinheiro</option><option value="Cartão de crédito">Cartão de crédito</option><option value="Cartão de débito">Cartão de débito</option></select></div>
+        <div class="field full"><label for="customerNotes">Observações</label><textarea id="customerNotes" name="notes" placeholder="Alguma informação adicional?"></textarea></div>
+      </div><button class="btn" type="submit">Continuar para o WhatsApp <i data-lucide="arrow-up-right" size="15"></i></button><p style="font-size:9px;color:#999;text-align:center;margin:10px 0 0">Nenhum pagamento é processado neste site demonstrativo.</p></form>
+    </div>
+  </div>
+  <div class="modal-wrap" id="policyModal" role="dialog" aria-modal="true" aria-label="Informações institucionais">
+    <div class="modal-backdrop" data-close-modal></div><div class="modal policy-modal"><button class="icon-btn modal-close" data-close-modal aria-label="Fechar"><i data-lucide="x"></i></button><div id="policyContent"></div></div>
+  </div>
+  <div class="quick-search" id="quickSearch" role="dialog" aria-modal="true" aria-label="Busca rápida"><div class="quick-search-panel"><div class="quick-search-top"><i data-lucide="search" size="19"></i><input id="quickSearchInput" type="search" placeholder="O que você está procurando?" autocomplete="off"><button class="icon-btn" id="closeQuickSearch" aria-label="Fechar busca"><i data-lucide="x"></i></button></div><div class="quick-search-results" id="quickSearchResults"><div class="quick-empty">Digite para encontrar sua próxima peça.</div></div><div class="muted" style="font-size:9px;margin-top:10px">DICA: pressione ESC para fechar</div></div></div>
+  <button class="back-top" id="backTop" aria-label="Voltar ao topo"><i data-lucide="arrow-up" size="17"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+  (() => {
+    'use strict';
+    const CONFIG = {
+      whatsapp: '5533988882026',
+      storeName: 'STARTWEAR',
+      freeShippingThreshold: 299,
+      shippingFee: 14.90,
+      currency: 'pt-BR',
+      locale: 'BRL',
+      storageKey: 'startwear-demo-cart-v1'
+    };
+    const products = [
+      {id:1,name:'Camiseta Oversized Essential',category:'Camisetas',audience:'Masculino',price:89.90,oldPrice:null,badge:'Mais vendido',colors:[{name:'Preto',hex:'#202020'},{name:'Off-white',hex:'#e8e3d8'},{name:'Verde oliva',hex:'#74765c'}],sizes:['P','M','G','GG'],stock:8,image:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=85',description:'A camiseta essencial com shape oversized, ombros deslocados e algodão macio. Uma base versátil para composições com personalidade.',featured:1,created:12},
+      {id:2,name:'Moletom Urban Heavy',category:'Moletons',audience:'Unissex',price:189.90,oldPrice:219.90,badge:'-14%',colors:[{name:'Cinza mescla',hex:'#aaa9a4'},{name:'Preto',hex:'#202020'}],sizes:['P','M','G','GG'],stock:5,image:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=85',description:'Moletom de toque encorpado, interior confortável e modelagem ampla. Feito para os dias que pedem conforto sem abrir mão do visual.',featured:2,created:11},
+      {id:3,name:'Calça Cargo Street',category:'Calças',audience:'Masculino',price:159.90,oldPrice:null,badge:'Urban pick',colors:[{name:'Preto',hex:'#202020'},{name:'Areia',hex:'#c6b89e'}],sizes:['38','40','42','44'],stock:4,image:'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&q=85',description:'Modelagem reta com bolsos utilitários e acabamento pensado para o uso diário. Uma peça de presença e funcionalidade.',featured:3,created:10},
+      {id:4,name:'Camiseta Basic Premium',category:'Camisetas',audience:'Feminino',price:69.90,oldPrice:null,badge:'Essencial',colors:[{name:'Branco',hex:'#f2f0e9'},{name:'Preto',hex:'#202020'},{name:'Rosa antigo',hex:'#c58f8b'}],sizes:['PP','P','M','G'],stock:12,image:'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&q=85',description:'O básico elevado: tecido confortável, toque suave e caimento que acompanha diferentes propostas de look.',featured:4,created:9},
+      {id:5,name:'Jaqueta Urban Wind',category:'Jaquetas',audience:'Unissex',price:219.90,oldPrice:null,badge:'Novo drop',colors:[{name:'Preto',hex:'#202020'},{name:'Verde militar',hex:'#535b47'}],sizes:['P','M','G','GG'],stock:3,image:'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=85',description:'Jaqueta leve de inspiração utilitária, com visual limpo e presença urbana. A camada final para um look marcante.',featured:5,created:8},
+      {id:6,name:'Bermuda Comfort Fit',category:'Bermudas',audience:'Masculino',price:99.90,oldPrice:119.90,badge:'Oferta',colors:[{name:'Preto',hex:'#202020'},{name:'Caqui',hex:'#b8a98b'}],sizes:['P','M','G','GG'],stock:7,image:'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=800&q=85',description:'Bermuda de caimento confortável e visual minimalista. Ideal para combinar com camisetas amplas e tênis favoritos.',featured:6,created:7},
+      {id:7,name:'Camiseta Boxy Style',category:'Camisetas',audience:'Feminino',price:79.90,oldPrice:null,badge:'Tendência',colors:[{name:'Off-white',hex:'#e8e3d8'},{name:'Grafite',hex:'#454545'}],sizes:['PP','P','M','G'],stock:6,image:'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&q=85',description:'Silhueta boxy, comprimento moderno e estrutura suave. Uma camiseta feita para composições descomplicadas e cheias de atitude.',featured:7,created:6},
+      {id:8,name:'Calça Wide Leg',category:'Calças',audience:'Feminino',price:169.90,oldPrice:null,badge:'Favorita',colors:[{name:'Jeans azul',hex:'#526b83'},{name:'Preto',hex:'#202020'}],sizes:['36','38','40','42'],stock:4,image:'https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&q=85',description:'Wide leg de cintura confortável e pernas amplas. Uma peça versátil que equilibra conforto, movimento e estilo.',featured:8,created:5},
+      {id:9,name:'Moletom Minimal Black',category:'Moletons',audience:'Unissex',price:179.90,oldPrice:199.90,badge:'-10%',colors:[{name:'Preto',hex:'#202020'},{name:'Marrom',hex:'#65564b'}],sizes:['P','M','G','GG'],stock:5,image:'https://images.unsplash.com/photo-1578681994506-b8f463449011?w=800&q=85',description:'Minimalismo em sua melhor forma. Moletom de visual clean, toque macio e caimento confortável para todas as horas.',featured:9,created:4},
+      {id:10,name:'Conjunto Urban Style',category:'Conjuntos',audience:'Feminino',price:249.90,oldPrice:null,badge:'Conjunto',colors:[{name:'Preto',hex:'#202020'},{name:'Cinza',hex:'#aaa9a4'}],sizes:['P','M','G'],stock:2,image:'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=800&q=85',description:'Conjunto coordenado para um visual pronto sem esforço. Design contemporâneo e conforto para acompanhar seu ritmo.',featured:10,created:3},
+      {id:11,name:'Boné Signature',category:'Acessórios',audience:'Unissex',price:69.90,oldPrice:null,badge:'Detalhe certo',colors:[{name:'Preto',hex:'#202020'},{name:'Areia',hex:'#c6b89e'},{name:'Verde',hex:'#69764e'}],sizes:['Único'],stock:10,image:'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=85',description:'Boné de perfil clássico com ajuste traseiro. O detalhe que finaliza a composição com autenticidade.',featured:11,created:2},
+      {id:12,name:'Camiseta Graphic Edition',category:'Camisetas',audience:'Masculino',price:99.90,oldPrice:null,badge:'Edição especial',colors:[{name:'Preto',hex:'#202020'},{name:'Branco',hex:'#f2f0e9'}],sizes:['P','M','G','GG'],stock:3,image:'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=800&q=85',description:'Camiseta com estampa gráfica exclusiva da coleção demonstrativa. Modelagem confortável e personalidade de sobra.',featured:12,created:1}
+    ];
+    let cart = loadCart();
+    let favorites = loadList('startwear-demo-favorites-v1');
+    let recent = loadList('startwear-demo-recent-v1').filter(id=>products.some(p=>p.id===id)).slice(0,4);
+    let heroIndex=0, heroTimer=null, heroPaused=false;
+    let activeFilter = 'Todos';
+    let currentProduct = null;
+    let selectedColor = '';
+    let selectedSize = '';
+    let modalQty = 1;
+    let checkoutLock = false;
+    const $ = s => document.querySelector(s);
+    const $$ = s => [...document.querySelectorAll(s)];
+    const money = n => new Intl.NumberFormat(CONFIG.currency,{style:'currency',currency:CONFIG.locale}).format(n);
+    const safe = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    function loadList(key){try{const v=JSON.parse(localStorage.getItem(key)||'[]');return Array.isArray(v)?v.filter(x=>Number.isInteger(x)):[]}catch(e){return[]}}
+    function saveList(key,list){try{localStorage.setItem(key,JSON.stringify(list))}catch(e){console.warn('Armazenamento local indisponível:',e)}}
+    function loadCart(){try{const raw=JSON.parse(localStorage.getItem(CONFIG.storageKey)||'[]');return Array.isArray(raw)?raw.filter(x=>products.some(p=>p.id===x.id)&&Number.isInteger(x.qty)&&x.qty>0):[]}catch(error){console.warn('Não foi possível recuperar a sacola:',error);return[]}}
+    function saveCart(){try{localStorage.setItem(CONFIG.storageKey,JSON.stringify(cart))}catch(error){console.warn('Não foi possível salvar a sacola:',error);toast('Não foi possível salvar sua sacola neste navegador.')}}
+    function findProduct(id){return products.find(p=>p.id===Number(id))}
+    function cartSubtotal(){return cart.reduce((sum,item)=>{const p=findProduct(item.id);return sum+(p?p.price*item.qty:0)},0)}
+    function cartCount(){return cart.reduce((sum,item)=>sum+item.qty,0)}
+    function shipping(){return cartSubtotal()===0||cartSubtotal()>=CONFIG.freeShippingThreshold?0:CONFIG.shippingFee}
+    function renderProducts(){
+      const query=$('#productSearch').value.trim().toLocaleLowerCase('pt-BR');
+      let list=products.filter(p=>{
+        const matchQuery=(p.name+' '+p.category+' '+p.audience).toLocaleLowerCase('pt-BR').includes(query);
+        const matchFilter=activeFilter==='Todos'||(activeFilter==='Ofertas'?!!p.oldPrice:
+          activeFilter==='Masculino'?['Masculino','Unissex'].includes(p.audience):
+          activeFilter==='Feminino'?['Feminino','Unissex'].includes(p.audience):
+          activeFilter==='Streetwear'?['Camisetas','Calças','Moletons','Jaquetas','Bermudas'].includes(p.category):
+          activeFilter==='Novidades'?p.created>=8:
+          activeFilter==='Favoritos'?favorites.includes(p.id):p.category===activeFilter);
+        return matchQuery&&matchFilter;
+      });
+      const sort=$('#sortProducts').value;
+      if(sort==='low')list.sort((a,b)=>a.price-b.price);
+      if(sort==='high')list.sort((a,b)=>b.price-a.price);
+      if(sort==='new')list.sort((a,b)=>b.created-a.created);
+      $('#productGrid').innerHTML=list.length?list.map(p=>`
+        <article class="product-card reveal visible">
+          <div class="product-photo" data-product="${p.id}" tabindex="0" role="button" aria-label="Ver ${safe(p.name)}">
+            <img src="${p.image}" alt="${safe(p.name)}" loading="lazy" width="800" height="1025">
+            ${p.badge?`<span class="tag">${safe(p.badge)}</span>`:''}
+            <button class="favorite-toggle ${favorites.includes(p.id)?'active':''}" data-wishlist="${p.id}" aria-label="${favorites.includes(p.id)?'Remover dos':'Adicionar aos'} favoritos"><i data-lucide="heart" size="17"></i></button>
+            <button class="quick-add" data-quick="${p.id}" type="button">Adicionar à sacola <span aria-hidden="true">+</span></button>
+          </div>
+          <div class="product-meta"><div class="category-label">${safe(p.category)} · ${safe(p.audience)}</div><h3>${safe(p.name)}</h3>
+          <div class="price-line">${money(p.price)} ${p.oldPrice?`<span class="old-price">${money(p.oldPrice)}</span>`:''}</div>
+          <div class="product-rating">★★★★★ <span>Seleção STARTWEAR</span></div><div class="stock-note"><strong>${p.stock<=3?'Últimas unidades':'Disponível'}</strong> · estoque demonstrativo</div><div class="swatches" aria-label="Cores disponíveis">${p.colors.slice(0,4).map(c=>`<span class="swatch" title="${safe(c.name)}" style="background:${c.hex}"></span>`).join('')}</div></div>
+        </article>`).join(''):'<div class="empty-state">Não encontramos peças com esse filtro. Experimente outra busca.</div>';
+      updateFavoriteCounts();if(window.lucide)lucide.createIcons();
+    }
+    function updateFavoriteCounts(){const n=favorites.length;$('#favoriteCount').textContent=n;$('#favoritesFilterCount').textContent=n}
+    function toggleFavorite(id){id=Number(id);favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];saveList('startwear-demo-favorites-v1',favorites);updateFavoriteCounts();renderProducts();toast(favorites.includes(id)?'Adicionado aos favoritos.':'Removido dos favoritos.')}
+    function renderRecent(){const section=$('#recentSection');if(!recent.length){section.hidden=true;return}section.hidden=false;$('#recentTrack').innerHTML=recent.map(id=>{const p=findProduct(id);return p?`<button class="recent-card" data-recent="${p.id}"><img src="${p.image}" alt="${safe(p.name)}" loading="lazy"><span><b>${safe(p.name)}</b><small>${money(p.price)}</small></span></button>`:''}).join('')}
+    function addRecent(id){recent=[Number(id),...recent.filter(x=>x!==Number(id))].slice(0,4);saveList('startwear-demo-recent-v1',recent);renderRecent()}
+    function setFilter(filter){
+      activeFilter=filter;
+      $$('.filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===filter));
+      renderProducts();
+    }
+    function openProduct(id){
+      const p=findProduct(id);if(!p)return;
+      currentProduct=p;addRecent(p.id);selectedColor=p.colors[0]?.name||'';selectedSize='';modalQty=1;
+      $('#productModalContent').innerHTML=`
+        <div class="product-modal-grid">
+          <div class="product-modal-image"><img src="${p.image}" alt="${safe(p.name)}" width="900" height="1100"></div>
+          <div class="product-modal-info"><div class="eyebrow">${safe(p.category)} / ${safe(p.audience)}</div><h2>${safe(p.name)}</h2>
+            <div class="price-line" style="font-size:16px">${money(p.price)} ${p.oldPrice?`<span class="old-price">${money(p.oldPrice)}</span>`:''}</div>
+            <p class="description">${safe(p.description)}</p>
+            <span class="option-label">Cor — <span id="chosenColor">${safe(selectedColor)}</span></span><div class="option-list">${p.colors.map((c,i)=>`<button type="button" class="option-btn color-option ${i===0?'selected':''}" data-color="${safe(c.name)}" style="background:${c.hex}" aria-label="${safe(c.name)}" title="${safe(c.name)}"></button>`).join('')}</div>
+            <span class="option-label">Tamanho <button type="button" class="size-guide" id="sizeGuide">Guia de tamanhos</button></span><div class="option-list">${p.sizes.map(s=>`<button type="button" class="option-btn" data-size="${safe(s)}">${safe(s)}</button>`).join('')}</div>
+            <div class="availability"><i data-lucide="check-circle" size="13" style="vertical-align:middle"></i> Estoque demonstrativo: ${p.stock} unidade(s)</div>
+            <div class="modal-buy"><div class="quantity-input"><button type="button" data-qty="-1" aria-label="Diminuir quantidade">−</button><span id="modalQty">1</span><button type="button" data-qty="1" aria-label="Aumentar quantidade">+</button></div><button class="btn" id="addToCart">Adicionar à sacola</button></div>
+            <p style="font-size:9px;color:#999;line-height:1.6;margin-top:14px">Produto, preço e estoque fictícios para demonstração comercial.</p>
+          </div>
+        </div>`;
+      showModal('productModal');if(window.lucide)lucide.createIcons();
+    }
+    function addToCart(id,color,size,qty){
+      const p=findProduct(id);if(!p)return;
+      if(p.colors.length&&!color){toast('Selecione uma cor para continuar.');return}
+      if(p.sizes.length&&!size){toast('Selecione um tamanho para continuar.');return}
+      const existing=cart.find(x=>x.id===p.id&&x.color===color&&x.size===size);
+      if(existing)existing.qty=Math.min(existing.qty+qty,99);else cart.push({id:p.id,color,size,qty});
+      saveCart();renderCart();toast('Peça adicionada à sua sacola.');closeModal('productModal');
+    }
+    function renderCart(){
+      const count=cartCount(),subtotal=cartSubtotal(),fee=shipping(),total=subtotal+fee;
+      $('#bagCount').textContent=count;$('#cartItemCount').textContent=`(${count})`;
+      $('#cartEmpty').hidden=count>0;$('#cartFoot').hidden=count===0;
+      $('#cartItems').innerHTML=cart.map((item,index)=>{const p=findProduct(item.id);if(!p)return'';return`
+        <div class="cart-item"><img src="${p.image}" alt="${safe(p.name)}" width="160" height="200"><div><h4>${safe(p.name)}</h4><p>${safe(item.color||'')}${item.size?' · '+safe(item.size):''}</p><b style="font-size:11px">${money(p.price*item.qty)}</b><div class="qty"><button data-cart-qty="${index}" data-delta="-1" aria-label="Diminuir">−</button><span style="font-size:10px">${item.qty}</span><button data-cart-qty="${index}" data-delta="1" aria-label="Aumentar">+</button></div></div><button class="remove" data-remove="${index}" aria-label="Remover produto"><i data-lucide="trash-2" size="15"></i></button></div>`}).join('');
+      $('#cartSubtotal').textContent=money(subtotal);$('#cartShipping').textContent=fee===0?'Grátis':money(fee);$('#cartTotal').textContent=money(total);
+      const remaining=Math.max(0,CONFIG.freeShippingThreshold-subtotal);
+      $('#shippingMessage').textContent=subtotal>=CONFIG.freeShippingThreshold?'Você ganhou frete grátis!':`Faltam ${money(remaining)} para ganhar frete grátis.`;
+      $('#shippingProgress').style.width=Math.min(100,subtotal/CONFIG.freeShippingThreshold*100)+'%';
+      if(window.lucide)lucide.createIcons();
+    }
+    function showModal(id){$('#'+id).classList.add('open');document.body.style.overflow='hidden'}
+    function closeModal(id){const el=$('#'+id);if(el)el.classList.remove('open');if(!$$('.modal-wrap.open').length)document.body.style.overflow=''}
+    function openCart(){closeMenu();$('#overlay').classList.add('open');$('#cartDrawer').classList.add('open');$('#cartDrawer').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+    function closeCart(){ $('#overlay').classList.remove('open');$('#cartDrawer').classList.remove('open');$('#cartDrawer').setAttribute('aria-hidden','true');if(!$$('.modal-wrap.open').length)document.body.style.overflow=''}
+    function openMenu(){$('#mobileMenu').classList.add('open');$('#mobileMenu').setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
+    function closeMenu(){$('#mobileMenu').classList.remove('open');$('#mobileMenu').setAttribute('aria-hidden','true');if(!$('#cartDrawer').classList.contains('open')&&!$$('.modal-wrap.open').length)document.body.style.overflow=''}
+    function toast(message){const el=$('#toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2600)}
+    function startCheckout(){if(!cart.length){toast('Sua sacola está vazia.');return}closeCart();showModal('checkoutModal')}
+    function buildOrderMessage(form){
+      const data=new FormData(form),subtotal=cartSubtotal(),fee=shipping(),total=subtotal+fee;
+      const lines=cart.map(item=>{const p=findProduct(item.id);return`Produto: ${p.name}\nTamanho: ${item.size||'Único'}\nCor: ${item.color||'Não se aplica'}\nQuantidade: ${item.qty}\nValor: ${money(p.price*item.qty)}`}).join('\n\n');
+      return `*NOVO PEDIDO — STARTWEAR*\n\nOlá! Gostaria de realizar o seguinte pedido:\n\n*PRODUTOS:*\n\n${lines}\n\n*RESUMO:*\n\nSubtotal: ${money(subtotal)}\nFrete: ${fee===0?'Grátis':money(fee)}\nTotal: ${money(total)}\n\n*DADOS DO CLIENTE:*\n\nNome: ${data.get('name')}\nCidade: ${data.get('city')}\nEndereço: ${data.get('address')}\nNúmero: ${data.get('number')}\nBairro: ${data.get('district')}\nComplemento: ${data.get('complement')||'Não informado'}\n\n*PAGAMENTO:*\n${data.get('payment')}\n\n*Observações:*\n${data.get('notes')||'Nenhuma'}\n\nAguardo confirmação. Obrigado!`;
+    }
+    function showPolicy(type){
+      const content=type==='privacidade'?`
+        <div class="eyebrow">Informações institucionais</div><h2>POLÍTICA DE PRIVACIDADE</h2>
+        <p>Esta é uma política ilustrativa criada para a demonstração da STARTWEAR. Em uma operação real, o texto deverá ser revisado conforme os processos efetivos da loja e a legislação aplicável.</p>
+        <h3>Dados informados</h3><p>Os dados preenchidos no formulário de pedido são utilizados para compor uma mensagem que será encaminhada ao WhatsApp escolhido pelo próprio visitante. Este protótipo não mantém cadastro de clientes em servidor.</p>
+        <h3>Armazenamento local</h3><p>A sacola pode ser salva no armazenamento local do navegador para facilitar a continuidade da navegação. O visitante pode limpar os dados do navegador para removê-la.</p>
+        <h3>Contato e solicitações</h3><p>Em uma loja real, o responsável deverá disponibilizar um canal de contato para dúvidas, solicitações e exercício dos direitos previstos na LGPD.</p>
+        <h3>Ambiente demonstrativo</h3><p>Endereço, telefone, catálogo e demais dados exibidos neste site são fictícios e não representam uma operação comercial verificada.</p>`:`
+        <div class="eyebrow">Informações institucionais</div><h2>TROCAS E DEVOLUÇÕES</h2>
+        <p>Conteúdo demonstrativo. Para uma loja em operação, prazos, condições, logística e procedimentos devem ser definidos pelo lojista e revisados de acordo com o Código de Defesa do Consumidor.</p>
+        <h3>Como solicitar</h3><p>Entre em contato pelo canal de atendimento informando o número do pedido, o produto e o motivo da solicitação. A equipe deverá orientar os próximos passos.</p>
+        <h3>Condições de análise</h3><p>As condições de troca, devolução por arrependimento e análise de defeitos devem observar a legislação vigente e ser comunicadas com clareza antes da compra.</p>
+        <h3>Reembolso</h3><p>O procedimento e o prazo de reembolso devem ser informados ao consumidor conforme a forma de pagamento e as regras aplicáveis.</p>
+        <h3>Importante</h3><p>Esta página é um exemplo de conteúdo institucional. Não constitui uma política comercial efetiva da STARTWEAR.</p>`;
+      $('#policyContent').innerHTML=content;showModal('policyModal');
+    }
+    function initEvents(){
+      $('#filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(b)setFilter(b.dataset.filter)});
+      $('#productSearch').addEventListener('input',renderProducts);$('#sortProducts').addEventListener('change',renderProducts);
+      $('#productGrid').addEventListener('click',e=>{const heart=e.target.closest('[data-wishlist]');if(heart){e.stopPropagation();toggleFavorite(heart.dataset.wishlist);return}const quick=e.target.closest('[data-quick]');if(quick){e.stopPropagation();openProduct(quick.dataset.quick);return}const card=e.target.closest('[data-product]');if(card)openProduct(card.dataset.product)});
+      $('#recentTrack').addEventListener('click',e=>{const b=e.target.closest('[data-recent]');if(b)openProduct(b.dataset.recent)});
+      $('#clearRecent').addEventListener('click',()=>{recent=[];saveList('startwear-demo-recent-v1',recent);renderRecent();toast('Histórico de visualização limpo.')});
+      $('#productGrid').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-product]')){e.preventDefault();openProduct(e.target.dataset.product)}});
+      $('#productModalContent').addEventListener('click',e=>{
+        const color=e.target.closest('[data-color]');if(color){selectedColor=color.dataset.color;$$('[data-color]').forEach(x=>x.classList.toggle('selected',x===color));$('#chosenColor').textContent=selectedColor}
+        const size=e.target.closest('[data-size]');if(size){selectedSize=size.dataset.size;$$('[data-size]').forEach(x=>x.classList.toggle('selected',x===size))}
+        if(e.target.closest('#sizeGuide')){toast('Guia demonstrativo: PP/P (36–38) · M (40) · G (42) · GG (44). Consulte a loja para medidas exatas.');return}
+        const qty=e.target.closest('[data-qty]');if(qty){modalQty=Math.max(1,Math.min(99,modalQty+Number(qty.dataset.qty)));$('#modalQty').textContent=modalQty}
+        if(e.target.closest('#addToCart')&&currentProduct)addToCart(currentProduct.id,selectedColor,selectedSize,modalQty);
+      });
+      $('#cartItems').addEventListener('click',e=>{
+        const remove=e.target.closest('[data-remove]');if(remove){cart.splice(Number(remove.dataset.remove),1);saveCart();renderCart();return}
+        const q=e.target.closest('[data-cart-qty]');if(q){const i=Number(q.dataset.cartQty),delta=Number(q.dataset.delta);if(!cart[i])return;cart[i].qty+=delta;if(cart[i].qty<=0)cart.splice(i,1);saveCart();renderCart()}
+      });
+      $('#openCart').addEventListener('click',openCart);$('#mobileCart').addEventListener('click',openCart);$('#closeCart').addEventListener('click',closeCart);$('#overlay').addEventListener('click',closeCart);
+      $('#continueShopping').addEventListener('click',()=>{closeCart();$('#produtos').scrollIntoView({behavior:'smooth'})});
+      $('#checkoutButton').addEventListener('click',startCheckout);
+      $('#checkoutForm').addEventListener('submit',e=>{
+        e.preventDefault();if(checkoutLock||!e.currentTarget.reportValidity())return;checkoutLock=true;
+        try{const message=buildOrderMessage(e.currentTarget);const url=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;const win=window.open(url,'_blank','noopener,noreferrer');if(!win)window.location.href=url;closeModal('checkoutModal');toast('Mensagem preparada. Confirme o pedido no WhatsApp.')}
+        catch(error){console.error('Erro ao preparar pedido:',error);toast('Não foi possível preparar o pedido. Tente novamente.')}
+        finally{setTimeout(()=>checkoutLock=false,1200)}
+      });
+      $('#openMenu').addEventListener('click',openMenu);$('#closeMenu').addEventListener('click',closeMenu);
+      $('#mobileMenu').addEventListener('click',e=>{const a=e.target.closest('a');if(a){closeMenu();if(a.dataset.filterLink){setFilter(a.dataset.filterLink);setTimeout(()=>$('#produtos').scrollIntoView({behavior:'smooth'}),80)}}});
+      $('#searchFocus').addEventListener('click',openQuickSearch);$('#showFavorites').addEventListener('click',()=>{setFilter('Favoritos');$('#produtos').scrollIntoView({behavior:'smooth'})});
+      $('#quickSearchInput').addEventListener('input',renderQuickSearch);$('#closeQuickSearch').addEventListener('click',closeQuickSearch);$('#quickSearch').addEventListener('click',e=>{if(e.target.id==='quickSearch')closeQuickSearch()});$('#quickSearchResults').addEventListener('click',e=>{const b=e.target.closest('[data-quick-result]');if(b){closeQuickSearch();openProduct(b.dataset.quickResult)}});
+      $('#mobileSearch').addEventListener('click',openQuickSearch);
+      $$('[data-filter-link]').forEach(a=>a.addEventListener('click',()=>{setFilter(a.dataset.filterLink)}));
+      $$('.category-card').forEach(a=>a.addEventListener('click',()=>setFilter(a.dataset.category)));
+      document.addEventListener('click',e=>{
+        const close=e.target.closest('[data-close-modal]');if(close){const modal=close.closest('.modal-wrap');if(modal)closeModal(modal.id)}
+        const policy=e.target.closest('[data-policy]');if(policy)showPolicy(policy.dataset.policy);
+      });
+      $('#newsletterForm').addEventListener('submit',e=>{e.preventDefault();const input=$('#newsletterEmail');if(!input.checkValidity()){input.reportValidity();return}$('#newsletterFeedback').textContent='Obrigado! Esta inscrição é apenas uma demonstração local.';input.value='';});
+      document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openQuickSearch()}if(e.key==='Escape'){closeCart();closeMenu();closeQuickSearch();$$('.modal-wrap.open').forEach(m=>closeModal(m.id))}});
+    }
+    function openQuickSearch(){closeMenu();$('#quickSearch').classList.add('open');document.body.style.overflow='hidden';setTimeout(()=>$('#quickSearchInput').focus(),60);renderQuickSearch()}
+    function closeQuickSearch(){if(!$('#quickSearch').classList.contains('open'))return;$('#quickSearch').classList.remove('open');$('#quickSearchInput').value='';document.body.style.overflow='';}
+    function renderQuickSearch(){const q=$('#quickSearchInput').value.trim().toLocaleLowerCase('pt-BR');if(!q){$('#quickSearchResults').innerHTML='<div class="quick-empty">Digite para encontrar sua próxima peça.</div>';return}const matches=products.filter(p=>(p.name+' '+p.category+' '+p.audience).toLocaleLowerCase('pt-BR').includes(q)).slice(0,6);$('#quickSearchResults').innerHTML=matches.length?matches.map(p=>`<button class="quick-result" data-quick-result="${p.id}"><img src="${p.image}" alt="" loading="lazy"><span><b>${safe(p.name)}</b><small>${safe(p.category)} · ${money(p.price)}</small></span></button>`).join(''):'<div class="quick-empty">Nenhuma peça encontrada. Tente outro termo.</div>'}
+    const heroSlides=[
+      {src:'https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1200&q=88',alt:'Editorial de moda urbana com looks contemporâneos',drop:'DROP 01 — 26',caption:'Everyday, elevated.'},
+      {src:'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1200&q=88',alt:'Produção editorial streetwear',drop:'STREET / 026',caption:'Own your attitude.'},
+      {src:'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1200&q=88',alt:'Campanha de moda contemporânea',drop:'NEW PERSPECTIVE',caption:'Style without limits.'}
+    ];
+    function showHeroSlide(index){heroIndex=(index+heroSlides.length)%heroSlides.length;const img=$('.hero-image img'),slide=heroSlides[heroIndex];img.classList.add('is-changing');setTimeout(()=>{img.src=slide.src;img.alt=slide.alt;$('#heroDrop').textContent=slide.drop;$('#heroCaption').textContent=slide.caption;img.onload=()=>img.classList.remove('is-changing');setTimeout(()=>img.classList.remove('is-changing'),500)},180);$$('.hero-dot').forEach((b,i)=>b.classList.toggle('active',i===heroIndex))}
+    function startHero(){if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;heroTimer=setInterval(()=>{if(!heroPaused)showHeroSlide(heroIndex+1)},5600)}
+    function initScrollEffects(){const header=$('.header'),top=$('#backTop');const update=()=>{header.classList.toggle('scrolled',window.scrollY>12);top.classList.toggle('visible',window.scrollY>650)};window.addEventListener('scroll',update,{passive:true});update();top.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));$$('.hero-dot').forEach(b=>b.addEventListener('click',()=>showHeroSlide(Number(b.dataset.slide))));$('#heroPause').addEventListener('click',()=>{heroPaused=!heroPaused;$('#heroPause').innerHTML=heroPaused?'<i data-lucide="play" size="12"></i>':'<i data-lucide="pause" size="12"></i>';$('#heroPause').setAttribute('aria-label',heroPaused?'Retomar apresentação':'Pausar apresentação');if(window.lucide)lucide.createIcons()});$('.hero-image').addEventListener('mouseenter',()=>heroPaused=true);$('.hero-image').addEventListener('mouseleave',()=>heroPaused=false);startHero()}
+    function initReveal(){
+      const nodes=$$('.reveal');if(!('IntersectionObserver'in window)){nodes.forEach(n=>n.classList.add('visible'));return}
+      const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.08});
+      nodes.forEach(n=>observer.observe(n));
+    }
+    function init(){renderProducts();renderCart();renderRecent();updateFavoriteCounts();initEvents();initReveal();initScrollEffects();if(window.lucide)lucide.createIcons()}
+    document.addEventListener('DOMContentLoaded',init);
+  })();
+  </script>
+</body>
+</html>
