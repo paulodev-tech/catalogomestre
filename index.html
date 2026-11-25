@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Loja Brilhante Caratinga | Referência em Moda Feminina em Caratinga/MG</title>
-  <meta name="description" content="Loja Brilhante Caratinga — Referência em moda feminina no Centro de Caratinga/MG. Vestidos, conjuntos, alfaiataria, jeans e linha fitness com atendimento personalizado via WhatsApp e nota 5,0 no Google." />
+  <title>Brilhante Caratinga | Referência em Moda Feminina em Caratinga/MG</title>
+  <meta name="description" content="Referência em moda feminina em Caratinga/MG. Vestidos, conjuntos em alfaiataria, jeans e linha fitness (@brilhantefitness). Nota 5,0 no Google com +1.010 avaliações. Visite na Av. Olegário Maciel, 98 ou peça pelo WhatsApp!" />
+  <meta name="keywords" content="moda feminina Caratinga, loja de roupas Caratinga MG, vestidos Caratinga, alfaiataria feminina, Brilhante Caratinga, Brilhante Fitness" />
   
-  <!-- Open Graph / Redes Sociais -->
+  <!-- Open Graph / Compartilhamento WhatsApp e Instagram -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Loja Brilhante Caratinga | Referência em Moda Feminina" />
-  <meta property="og:description" content="Para nós, o que importa é você! Confira nossa curadoria de vestidos, conjuntos, alfaiataria e jeans. Atendimento na Av. Olegário Maciel, 98 ou via WhatsApp." />
-  <meta property="og:image" content="./assets/hero.jpg" />
+  <meta property="og:title" content="Brilhante Caratinga — Referência em Moda Feminina" />
+  <meta property="og:description" content="Para nós, o que importa é você! Confira nossa curadoria de vestidos, alfaiataria, jeans e moda fitness. Atendimento personalizado e delivery em Caratinga/MG." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" />
   <meta property="og:locale" content="pt_BR" />
 
-  <!-- Google Fonts: Pareamento Editorial (Cormorant Garamond + Plus Jakarta Sans + Caveat) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Pareamento Editorial (Cormorant Garamond + Plus Jakarta Sans + Alex Brush) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,25 +25,25 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            brand: {
-              cream: '#FAF7F4',
-              sand: '#F2EAE4',
-              blush: '#E8D9CE',
-              gold: '#B87A56',
-              goldDark: '#9A603E',
-              espresso: '#2C221E',
-              taupe: '#6E5D55',
-            }
-          },
           fontFamily: {
             serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            script: ['"Caveat"', 'cursive'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            script: ['"Alex Brush"', 'cursive'],
+          },
+          colors: {
+            brand: {
+              gold: '#B6895B',       // Dourado quente extraído da identidade visual @brilhantecaratinga
+              goldDark: '#966D43',   // Tom mais profundo para hover e contraste acessível (WCAG)
+              goldLight: '#F3EAE1',  // Tom champagne suave para badges e fundos secundários
+              cream: '#FAF7F5',      // Off-white editorial quente
+              sand: '#EFE9E3',       // Bege areia para separações sutis
+              charcoal: '#231F20',   // Preto suave de alto contraste
+              muted: '#665E59',      // Cinza quente para textos de apoio
+            }
           },
           boxShadow: {
-            'soft': '0 10px 30px -10px rgba(44, 34, 30, 0.08)',
-            'card': '0 4px 20px -2px rgba(44, 34, 30, 0.05)',
+            'soft': '0 10px 30px -10px rgba(35, 31, 32, 0.06)',
+            'card': '0 4px 20px -2px rgba(182, 137, 91, 0.08)',
           }
         }
       }
@@ -53,172 +54,174 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Ajustes finos de tipografia e scrollbar */
-    body {
-      background-color: #FAF7F4;
-      color: #2C221E;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+    /* Refinamentos visuais e barra de rolagem limpa */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    .glass-nav {
+      background: rgba(250, 247, 245, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
-    .font-editorial {
-      font-family: 'Cormorant Garamond', serif;
+
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.7; }
+      70% { transform: scale(1.25); opacity: 0; }
+      100% { transform: scale(1.25); opacity: 0; }
     }
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    .whatsapp-pulse::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 9999px;
+      background-color: #25D366;
+      z-index: -1;
+      animation: pulse-ring 2.2s infinite;
     }
   </style>
 </head>
-<body class="antialiased selection:bg-brand-gold selection:text-white">
+<body class="bg-brand-cream text-brand-charcoal font-sans antialiased overflow-x-hidden selection:bg-brand-gold selection:text-white">
 
-  <!-- 1. TOP BAR DE AUTORIDADE E LOCALIZAÇÃO -->
-  <div class="bg-brand-espresso text-brand-cream text-xs py-2.5 px-4 text-center tracking-wide">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
-      <span class="inline-flex items-center gap-1.5 font-medium">
-        <span class="text-amber-400">★★★★★</span>
-        <span>Nota 5,0 no Google (+1.010 avaliações reais)</span>
+  <!-- TOP BAR DE AUTORIDADE E LOCALIZAÇÃO -->
+  <div class="bg-brand-gold text-white text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+      <span class="inline-flex items-center gap-1">
+        <i data-lucide="star" class="w-3.5 h-3.5 fill-white text-white"></i>
+        <strong>5,0 no Google</strong> (+1.010 avaliações)
       </span>
-      <span class="hidden sm:inline text-brand-blush/40">•</span>
-      <span class="hidden md:inline text-brand-blush">Av. Olegário Maciel, 98 – Centro, Caratinga/MG</span>
-      <span class="hidden lg:inline text-brand-blush/40">•</span>
-      <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Loja%20Brilhante%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener" class="underline decoration-brand-gold underline-offset-2 hover:text-brand-blush transition">
-        Atendimento & Delivery: (33) 99916-2686
-      </a>
+      <span class="hidden sm:inline opacity-60">•</span>
+      <span>Delivery rápido em Caratinga & Retirada na Av. Olegário Maciel, 98</span>
     </div>
   </div>
 
-  <!-- 2. HEADER / NAVEGAÇÃO MINIMALISTA -->
-  <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-brand-blush/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3.5 flex items-center justify-between">
+  <!-- CABEÇALHO / NAVBAR -->
+  <header class="sticky top-0 z-40 glass-nav border-b border-brand-sand/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
       
-      <!-- Logo Oficial + Nome -->
+      <!-- Logo Tipográfica + Emblema Circular inspirado no Instagram -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-full border border-brand-gold/40 bg-white flex items-center justify-center overflow-hidden shadow-sm group-hover:border-brand-gold transition">
-          <img src="./assets/logo.png" alt="Logo Brilhante Caratinga" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          <span class="hidden font-editorial text-brand-gold font-bold text-lg tracking-widest">B</span>
+        <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-brand-gold/60 bg-white flex items-center justify-center shadow-sm group-hover:border-brand-gold transition-colors">
+          <span class="font-serif font-bold text-brand-gold text-lg tracking-tighter">B</span>
         </div>
-        <div>
-          <span class="font-editorial text-2xl sm:text-[26px] font-semibold tracking-[0.14em] text-brand-espresso uppercase block leading-none">
-            BRILHANTE
-          </span>
-          <span class="text-[10px] uppercase tracking-[0.22em] text-brand-taupe font-medium block mt-0.5">
-            Caratinga • MG
-          </span>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl font-bold tracking-[0.14em] text-brand-charcoal leading-none uppercase">Brilhante</span>
+          <span class="text-[10px] tracking-[0.22em] text-brand-goldDark uppercase font-semibold mt-0.5">Caratinga • MG</span>
         </div>
       </a>
 
-      <!-- Menu Desktop -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-espresso/85">
-        <a href="#categorias" class="hover:text-brand-gold transition">Categorias</a>
-        <a href="#vitrine" class="hover:text-brand-gold transition">Destaques</a>
-        <a href="#sobre" class="hover:text-brand-gold transition">Nossa Essência</a>
-        <a href="#avaliacoes" class="hover:text-brand-gold transition">Clientes</a>
-        <a href="#localizacao" class="hover:text-brand-gold transition">Loja & Horários</a>
+      <!-- Navegação Desktop -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-charcoal/85">
+        <a href="#categorias" class="hover:text-brand-gold transition-colors">Categorias</a>
+        <a href="#vitrine" class="hover:text-brand-gold transition-colors">Destaques</a>
+        <a href="#sobre" class="hover:text-brand-gold transition-colors">Nossa Essência</a>
+        <a href="#avaliacoes" class="hover:text-brand-gold transition-colors">Avaliações</a>
+        <a href="#localizacao" class="hover:text-brand-gold transition-colors">Loja & Horários</a>
       </nav>
 
-      <!-- Ações Direita -->
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener" aria-label="Instagram @brilhantecaratinga" class="p-2.5 rounded-full text-brand-espresso hover:bg-brand-sand transition">
+      <!-- Ações Direitas -->
+      <div class="flex items-center gap-2.5 sm:gap-4">
+        <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener noreferrer" aria-label="Instagram Brilhante Caratinga" class="p-2 text-brand-charcoal/80 hover:text-brand-gold transition-colors">
           <i data-lucide="instagram" class="w-5 h-5"></i>
         </a>
-        <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Brilhante%20Caratinga%20e%20quero%20ver%20as%20novidades!" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full transition shadow-sm">
+        <a href="#" data-wa-default class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full shadow-sm transition-all hover:-translate-y-0.5">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
-          <span>Falar no WhatsApp</span>
-        </a>
-        <!-- Botão Menu Mobile -->
-        <button id="mobile-menu-btn" aria-label="Abrir menu" class="md:hidden p-2.5 rounded-full text-brand-espresso hover:bg-brand-sand transition">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Drawer Menu Mobile -->
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-cream border-b border-brand-blush px-4 pt-2 pb-6 space-y-3">
-      <a href="#categorias" class="mobile-link block py-2 text-base font-medium text-brand-espresso border-b border-brand-blush/50">Categorias</a>
-      <a href="#vitrine" class="mobile-link block py-2 text-base font-medium text-brand-espresso border-b border-brand-blush/50">Vitrine de Destaques</a>
-      <a href="#sobre" class="mobile-link block py-2 text-base font-medium text-brand-espresso border-b border-brand-blush/50">Sobre a Brilhante</a>
-      <a href="#avaliacoes" class="mobile-link block py-2 text-base font-medium text-brand-espresso border-b border-brand-blush/50">Avaliações (5,0 ★)</a>
-      <a href="#localizacao" class="mobile-link block py-2 text-base font-medium text-brand-espresso">Endereço e Horários</a>
-      <div class="pt-2">
-        <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 bg-brand-gold text-white font-semibold py-3 rounded-full">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
-          Chamar Consultora no WhatsApp
+          <span>Atendimento</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- 3. PRIMEIRA DOBRA (HERO EDITORIAL ASSIMÉTRICO - MOBILE-FIRST) -->
-  <section class="relative bg-gradient-to-b from-brand-sand/80 to-brand-cream overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 lg:py-16">
+  <!-- DOBRA 1: HERO SECTION (MOBILE-FIRST & ASSIMÉTRICO COMO A REFERÊNCIA) -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-brand-sand/50 via-brand-cream to-brand-cream pt-6 pb-12 sm:pt-12 sm:pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Coluna Esquerda: Headline, Slogan e CTAs -->
+        <!-- Coluna Esquerda: Copy Editorial + Provas de Autoridade + CTAs -->
         <div class="lg:col-span-6 space-y-5 sm:space-y-6 text-left z-10">
-          <div class="inline-flex items-center gap-2 bg-white/90 border border-brand-blush px-3.5 py-1.5 rounded-full shadow-xs">
-            <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-            <span class="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-brand-taupe">
-              Referência em Moda Feminina • +31 mil seguidoras
+          <!-- Badge de Autoridade Google + Instagram -->
+          <div class="inline-flex items-center gap-2 bg-white border border-brand-gold/25 px-3.5 py-1.5 rounded-full shadow-xs">
+            <span class="flex text-amber-400">
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
+              <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
             </span>
+            <span class="text-xs font-semibold text-brand-charcoal">5,0 no Google</span>
+            <span class="text-brand-muted text-xs">• +31 mil seguidoras</span>
           </div>
 
-          <h1 class="font-editorial text-[42px] sm:text-6xl lg:text-[66px] font-semibold text-brand-espresso leading-[1.04] tracking-tight">
-            Eleve o Seu Estilo <span class="italic font-normal text-brand-gold">Todos os Dias.</span>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.65rem] font-semibold text-brand-charcoal leading-[1.08] tracking-tight">
+            Referência em <br class="hidden sm:inline" />
+            <span class="italic font-normal text-brand-goldDark">Moda Feminina</span> <br />
+            em Caratinga
           </h1>
 
-          <p class="text-brand-taupe text-base sm:text-lg max-w-xl leading-relaxed">
-            Peças selecionadas com carinho para valorizar a sua essência — dos vestidos leves à alfaiataria impecável. <strong>Para nós, o que importa é você!</strong>
+          <p class="text-brand-muted text-base sm:text-lg max-w-xl leading-relaxed">
+            Para nós, o que importa é você! Curadoria atemporal em vestidos, alfaiataria, jeans e moda fitness com atendimento próximo e entrega rápida na sua casa.
           </p>
 
-          <!-- Botões de Ação Imediata -->
+          <!-- Botões de Conversão -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-            <a href="#vitrine" class="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full transition shadow-soft">
-              <span>Explorar Vitrine</span>
+            <a href="#" data-wa-default class="inline-flex items-center justify-center gap-2.5 bg-brand-gold hover:bg-brand-goldDark text-white font-semibold px-7 py-3.5 rounded-full shadow-md transition-all hover:-translate-y-0.5 text-sm sm:text-base">
+              <span>Chamar no WhatsApp</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Brilhante%20Caratinga%20e%20gostaria%20de%20receber%20as%20novidades%20no%20WhatsApp." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-sand text-brand-espresso border border-brand-espresso/20 font-semibold text-sm sm:text-base px-7 py-3.5 rounded-full transition">
-              <i data-lucide="message-circle" class="w-4 h-4 text-brand-gold"></i>
-              <span>Atendimento Online</span>
+            <a href="#vitrine" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-brand-goldLight/60 text-brand-charcoal border border-brand-charcoal/15 font-semibold px-7 py-3.5 rounded-full transition-colors text-sm sm:text-base">
+              <span>Explorar Peças</span>
             </a>
           </div>
 
-          <!-- 3 Selos de Diferenciais (Fiel à Referência Visual) -->
-          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-brand-blush/80 max-w-lg">
+          <!-- 3 Pilares Inferiores (Reproduzindo os 3 ícones da Hero de referência) -->
+          <div class="grid grid-cols-3 gap-3 pt-4 sm:pt-6 border-t border-brand-charcoal/10 max-w-lg">
             <div class="flex items-start gap-2.5">
-              <i data-lucide="sparkles" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
-              <span class="text-xs sm:text-[13px] font-medium text-brand-espresso leading-snug">Curadoria Atualizada</span>
+              <div class="p-2 rounded-lg bg-brand-goldLight text-brand-goldDark shrink-0">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-medium text-brand-charcoal leading-snug">Curadoria Atualizada</span>
             </div>
             <div class="flex items-start gap-2.5">
-              <i data-lucide="heart-handshake" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
-              <span class="text-xs sm:text-[13px] font-medium text-brand-espresso leading-snug">Atendimento Próximo</span>
+              <div class="p-2 rounded-lg bg-brand-goldLight text-brand-goldDark shrink-0">
+                <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-medium text-brand-charcoal leading-snug">Atendimento Próximo</span>
             </div>
             <div class="flex items-start gap-2.5">
-              <i data-lucide="truck" class="w-5 h-5 text-brand-gold shrink-0 mt-0.5"></i>
-              <span class="text-xs sm:text-[13px] font-medium text-brand-espresso leading-snug">Delivery & Retirada</span>
+              <div class="p-2 rounded-lg bg-brand-goldLight text-brand-goldDark shrink-0">
+                <i data-lucide="truck" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs font-medium text-brand-charcoal leading-snug">Delivery & Retirada</span>
             </div>
           </div>
         </div>
 
-        <!-- Coluna Direita: Imagem Destaque + Assinatura Editorial -->
+        <!-- Coluna Direita: Imagem Editorial + Selos Flutuantes (Estilo Aurora Reference) -->
         <div class="lg:col-span-6 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <div class="aspect-[4/5] sm:aspect-[4/4.6] rounded-2xl overflow-hidden bg-brand-blush shadow-soft border border-white">
-              <img src="./assets/hero.jpg" alt="Look destaque Loja Brilhante Caratinga" class="w-full h-full object-cover object-top" />
+            <!-- Moldura Principal -->
+            <div class="relative rounded-2xl overflow-hidden shadow-soft aspect-[4/4.6] sm:aspect-[4/4.3] bg-brand-sand">
+              <img id="img-hero" src="" alt="Moda Feminina Brilhante Caratinga" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent"></div>
+              
+              <!-- Legenda discreta inferior na foto -->
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
+                <div class="bg-brand-charcoal/70 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15">
+                  <p class="text-[11px] uppercase tracking-widest text-brand-goldLight font-semibold">Nova Curadoria</p>
+                  <p class="text-xs sm:text-sm font-medium">Vestidos, Alfaiataria & Jeans</p>
+                </div>
+              </div>
             </div>
 
-            <!-- Tag Lateral Direita (Inspirada no "Autumn Collection" da referência) -->
-            <div class="hidden sm:block absolute top-6 right-5 bg-brand-cream/90 backdrop-blur-sm px-3.5 py-2.5 rounded-xl border border-brand-blush text-right shadow-xs">
-              <p class="text-[10px] uppercase tracking-[0.22em] text-brand-taupe font-semibold">Caratinga • MG</p>
-              <p class="font-editorial text-lg font-semibold text-brand-espresso leading-tight">Moda Feminina</p>
+            <!-- Selo Tipográfico Flutuante Superior Direito (Como "AUTUMN COLLECTION" na referência) -->
+            <div class="hidden sm:block absolute -top-3 -right-3 bg-white/95 backdrop-blur-sm border border-brand-gold/30 px-4 py-3 rounded-xl shadow-card text-right">
+              <p class="text-[10px] tracking-[0.22em] uppercase text-brand-goldDark font-bold">Coleção Oficial</p>
+              <p class="font-serif text-lg font-semibold text-brand-charcoal">Brilhante</p>
             </div>
 
-            <!-- Assinatura Cursiva Flutuante (Inspirada no "New Beginnings" da referência) -->
-            <div class="absolute -bottom-4 right-4 sm:right-6 bg-white/95 backdrop-blur-sm px-5 py-3 rounded-2xl shadow-soft border border-brand-blush/80 transform -rotate-2">
-              <p class="font-script text-2xl sm:text-3xl text-brand-gold leading-none">
-                Para nós, o que importa é você!
-              </p>
+            <!-- Assinatura Manuscrita Flutuante (Como "New Beginnings New Styles" na referência) -->
+            <div class="hidden sm:block absolute bottom-14 -left-8 bg-brand-cream/95 backdrop-blur-sm px-5 py-2.5 rounded-xl border border-brand-gold/25 shadow-card -rotate-3">
+              <p class="font-script text-3xl text-brand-goldDark leading-none">Para nós, o que</p>
+              <p class="font-script text-3xl text-brand-charcoal leading-none pl-4">importa é você!</p>
             </div>
           </div>
         </div>
@@ -227,438 +230,204 @@
     </div>
   </section>
 
-  <!-- 4. CATEGORIAS ("ENCONTRE O SEU ESTILO PERFEITO") -->
-  <section id="categorias" class="py-14 sm:py-20 bg-brand-cream">
+  <!-- DOBRA 2: ENCONTRE SEU ESTILO (CATEGORIAS EM CARDS VERTICAIS COMO A REFERÊNCIA) -->
+  <section id="categorias" class="py-12 sm:py-16 bg-white border-y border-brand-sand/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-10 gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
         <div>
-          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-1.5">
-            Navegue por Estilo
-          </span>
-          <h2 class="font-editorial text-3xl sm:text-4xl lg:text-[42px] font-semibold text-brand-espresso leading-tight">
-            Encontre o Seu Look Perfeito
-          </h2>
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">Nossas Linhas</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-charcoal mt-1">Encontre Seu Estilo</h2>
         </div>
-        <a href="#vitrine" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-espresso hover:text-brand-gold transition">
-          <span>Ver toda a vitrine</span>
+        <a href="#vitrine" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-goldDark hover:text-brand-charcoal transition-colors">
+          <span>Ver vitrine completa</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
 
-      <!-- Grid de 5 Categorias Principais -->
+      <!-- Grid de 5 Categorias Principais da Loja -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
-        
         <!-- Categoria 1: Vestidos -->
-        <a href="#vitrine" data-filter-trigger="vestidos" class="group block">
-          <div class="aspect-[3/4] rounded-xl overflow-hidden bg-brand-sand mb-3 border border-brand-blush/50">
-            <img src="./assets/produto-1.jpg" alt="Vestidos Loja Brilhante" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+        <button onclick="filtrarCategoria('Vestidos')" class="group text-left focus:outline-none">
+          <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
+            <img id="img-cat-vestidos" src="" alt="Vestidos Brilhante Caratinga" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
           </div>
           <div class="flex items-center justify-between px-0.5">
-            <span class="font-medium text-sm sm:text-base text-brand-espresso group-hover:text-brand-gold transition">Vestidos</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-taupe group-hover:translate-x-1 transition"></i>
+            <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Vestidos</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-goldDark group-hover:translate-x-1 transition-transform"></i>
           </div>
-        </a>
+        </button>
 
-        <!-- Categoria 2: Conjuntos -->
-        <a href="#vitrine" data-filter-trigger="conjuntos" class="group block">
-          <div class="aspect-[3/4] rounded-xl overflow-hidden bg-brand-sand mb-3 border border-brand-blush/50">
-            <img src="./assets/produto-3.jpg" alt="Conjuntos Loja Brilhante" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+        <!-- Categoria 2: Conjuntos & Alfaiataria -->
+        <button onclick="filtrarCategoria('Alfaiataria')" class="group text-left focus:outline-none">
+          <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
+            <img id="img-cat-alfaiataria" src="" alt="Conjuntos e Alfaiataria" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
-            <span class="font-medium text-sm sm:text-base text-brand-espresso group-hover:text-brand-gold transition">Conjuntos</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-taupe group-hover:translate-x-1 transition"></i>
+            <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Alfaiataria</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-goldDark group-hover:translate-x-1 transition-transform"></i>
           </div>
-        </a>
+        </button>
 
-        <!-- Categoria 3: Alfaiataria -->
-        <a href="#vitrine" data-filter-trigger="alfaiataria" class="group block">
-          <div class="aspect-[3/4] rounded-xl overflow-hidden bg-brand-sand mb-3 border border-brand-blush/50">
-            <img src="./assets/produto-6.jpg" alt="Alfaiataria Loja Brilhante" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+        <!-- Categoria 3: Blusas & Tricôs -->
+        <button onclick="filtrarCategoria('Blusas')" class="group text-left focus:outline-none">
+          <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
+            <img id="img-cat-blusas" src="" alt="Blusas Femininas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
-            <span class="font-medium text-sm sm:text-base text-brand-espresso group-hover:text-brand-gold transition">Alfaiataria</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-taupe group-hover:translate-x-1 transition"></i>
+            <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Blusas & Tops</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-goldDark group-hover:translate-x-1 transition-transform"></i>
           </div>
-        </a>
+        </button>
 
-        <!-- Categoria 4: Jeans & Casual -->
-        <a href="#vitrine" data-filter-trigger="jeans" class="group block">
-          <div class="aspect-[3/4] rounded-xl overflow-hidden bg-brand-sand mb-3 border border-brand-blush/50">
-            <img src="./assets/produto-4.jpg" alt="Jeans Loja Brilhante" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+        <!-- Categoria 4: Jeans -->
+        <button onclick="filtrarCategoria('Jeans')" class="group text-left focus:outline-none">
+          <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
+            <img id="img-cat-jeans" src="" alt="Jeans Feminino" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
-            <span class="font-medium text-sm sm:text-base text-brand-espresso group-hover:text-brand-gold transition">Jeans & Blusas</span>
-            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-taupe group-hover:translate-x-1 transition"></i>
+            <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Jeans</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-goldDark group-hover:translate-x-1 transition-transform"></i>
           </div>
-        </a>
+        </button>
 
         <!-- Categoria 5: Linha Fitness -->
-        <a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener" class="group block col-span-2 sm:col-span-1">
-          <div class="aspect-[16/10] sm:aspect-[3/4] rounded-xl overflow-hidden bg-brand-sand mb-3 border border-brand-blush/50 relative">
-            <img src="./assets/produto-2.jpg" alt="Linha Fitness @brilhantefitness" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-brand-espresso/70 via-brand-espresso/20 to-transparent flex flex-col justify-end p-4">
-              <span class="text-[10px] uppercase tracking-widest text-brand-blush font-semibold">Perfil Exclusivo</span>
-              <span class="font-editorial text-xl text-white font-semibold">@brilhantefitness</span>
-            </div>
+        <a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener noreferrer" class="group text-left col-span-2 sm:col-span-1">
+          <div class="rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
+            <img id="img-cat-fitness" src="" alt="Brilhante Fitness" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute top-2.5 left-2.5 bg-white/90 backdrop-blur-xs text-[10px] font-bold uppercase tracking-wider text-brand-goldDark px-2.5 py-1 rounded-full">
+              @brilhantefitness
+            </span>
           </div>
           <div class="flex items-center justify-between px-0.5">
-            <span class="font-medium text-sm sm:text-base text-brand-espresso group-hover:text-brand-gold transition">Linha Fitness</span>
-            <i data-lucide="external-link" class="w-4 h-4 text-brand-taupe"></i>
+            <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Linha Fitness</span>
+            <i data-lucide="external-link" class="w-4 h-4 text-brand-goldDark"></i>
           </div>
         </a>
-
       </div>
     </div>
   </section>
 
-  <!-- 5. VITRINE DE DESTAQUES ("NOSSOS LOOKS MAIS AMADOS") -->
-  <section id="vitrine" class="py-14 sm:py-20 bg-brand-sand/55 border-y border-brand-blush/60">
+  <!-- DOBRA 3: VITRINE DE PRODUTOS REAIS (BASEADA NAS FOTOS ANEXADAS) -->
+  <section id="vitrine" class="py-14 sm:py-20 bg-brand-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Cabeçalho + Filtros -->
+      <!-- Cabeçalho da Seção + Filtros Rápidos -->
       <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block mb-1.5">
-          Curadoria Brilhante
-        </span>
-        <h2 class="font-editorial text-3xl sm:text-4xl lg:text-[44px] font-semibold text-brand-espresso leading-tight">
-          Nossos Looks Mais Amados
-        </h2>
-        <p class="text-brand-taupe text-sm sm:text-base mt-2">
-          Clique no botão do seu look favorito para consultar tamanhos disponíveis, valores e solicitar entrega pelo WhatsApp.
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">Curadoria Selecionada</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-charcoal mt-1">Os Favoritos da Loja</h2>
+        <p class="text-brand-muted text-sm sm:text-base mt-2">
+          Clique na peça desejada para consultar tamanhos disponíveis e reservar diretamente pelo WhatsApp com nossa equipe.
         </p>
+      </div>
 
-        <!-- Barra de Filtros Rápidos -->
-        <div class="flex items-center justify-center flex-wrap gap-2 mt-6">
-          <button data-filter="all" class="filter-btn active bg-brand-espresso text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition">
-            Todos os Looks (8)
-          </button>
-          <button data-filter="vestidos" class="filter-btn bg-white text-brand-espresso hover:bg-brand-blush/50 border border-brand-blush text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition">
-            Vestidos
-          </button>
-          <button data-filter="conjuntos" class="filter-btn bg-white text-brand-espresso hover:bg-brand-blush/50 border border-brand-blush text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition">
-            Conjuntos & Alfaiataria
-          </button>
-          <button data-filter="jeans" class="filter-btn bg-white text-brand-espresso hover:bg-brand-blush/50 border border-brand-blush text-xs sm:text-sm font-medium px-4 py-2 rounded-full transition">
-            Jeans & Blusas
-          </button>
+      <!-- Abas de Filtro por Categoria -->
+      <div id="filtros-container" class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6">
+        <button data-filter="Todos" class="filter-btn active px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-gold text-white shadow-xs shrink-0">
+          Todos os Looks
+        </button>
+        <button data-filter="Vestidos" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
+          Vestidos
+        </button>
+        <button data-filter="Alfaiataria" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
+          Conjuntos & Alfaiataria
+        </button>
+        <button data-filter="Jeans" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
+          Jeans
+        </button>
+        <button data-filter="Blusas" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
+          Blusas
+        </button>
+      </div>
+
+      <!-- Grade de Produtos (4 colunas desktop, 2 colunas mobile) -->
+      <div id="grid-produtos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Os cards serão renderizados via JavaScript limpo usando os dados reais das fotos anexadas -->
+      </div>
+
+      <!-- Banner Intermediário Linha Fitness (@brilhantefitness) -->
+      <div class="mt-14 rounded-2xl bg-white border border-brand-gold/25 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-card">
+        <div class="flex items-center gap-4 text-left">
+          <div class="w-14 h-14 rounded-2xl bg-brand-goldLight flex items-center justify-center text-brand-goldDark shrink-0">
+            <i data-lucide="dumbbell" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-brand-goldDark">Linha Esportiva Exclusiva</span>
+            <h3 class="font-serif text-2xl font-semibold text-brand-charcoal">Conheça a Brilhante Fitness</h3>
+            <p class="text-sm text-brand-muted mt-0.5">Conjuntos, tops e leggings com alta sustentação, conforto e estilo para seus treinos.</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 w-full md:w-auto justify-end">
+          <a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-brand-charcoal/15 text-sm font-semibold text-brand-charcoal hover:bg-brand-cream transition-colors w-full sm:w-auto">
+            <i data-lucide="instagram" class="w-4 h-4 text-brand-goldDark"></i>
+            <span>@brilhantefitness</span>
+          </a>
+          <a href="#" data-wa-fitness class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-brand-gold hover:bg-brand-goldDark text-white text-sm font-semibold transition-colors w-full sm:w-auto">
+            <span>Pedir Catálogo Fitness</span>
+          </a>
         </div>
       </div>
 
-      <!-- Grid de Produtos (8 Peças Reais Mapeadas) -->
-      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <!-- CARD 1: Vestido Longo Floral Azul-Marinho -->
-        <article data-category="vestidos" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-1.jpg" alt="Vestido Longo Frente Única Floral Marinho" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-brand-gold text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide">
-                Carro-Chefe
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Vestidos)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Vestido Longo Floral Marinho
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Modelagem frente única com busto torcido e barrado floral vibrante. Leveza e elegância para eventos e dias especiais.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Longo%20Floral%20Marinho" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 2: Combo Blusa Marrom + Bermuda Jeans -->
-        <article data-category="jeans" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-2.jpg" alt="Blusa Chocolate & Bermuda Jeans" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-brand-espresso text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide">
-                Tendência
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Jeans & Casual)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Blusa Chocolate & Bermuda Jeans
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Blusa ajustada em tom terroso combinada com bermuda jeans de cintura alta e barra desfiada. Conforto moderno.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Blusa%20Chocolate%20e%20Bermuda%20Jeans" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 3: Conjunto Off-White Bordado Floral Azul -->
-        <article data-category="conjuntos" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-3.jpg" alt="Conjunto Off-White Bordado Azul" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-brand-gold text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide">
-                Exclusivo
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Conjuntos)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Conjunto Off-White Bordado Azul
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Blusa tomara-que-caia peplum com calça pantalona fluida em off-white e delicados bordados florais na barra.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Conjunto%20Off-White%20Bordado%20Azul" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 4: Blusa Gola Degagê Rosa + Wide Leg Jeans -->
-        <article data-category="jeans" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-4.jpg" alt="Blusa Gola Degagê Rosa & Calça Wide Leg" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-white/95 text-brand-espresso text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide shadow-xs">
-                Mais Pedido
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Jeans & Blusas)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Blusa Degagê Rosé & Wide Leg
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Blusa texturizada frente única em rosa suave com caimento degagê, acompanhada de calça jeans wide leg de corte impecável.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Blusa%20Degag%C3%AA%20Ros%C3%A9%20e%20Cal%C3%A7a%20Wide%20Leg" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 5: Vestido Curto Floral Marinho e Dourado -->
-        <article data-category="vestidos" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-5.jpg" alt="Vestido Curto Três Marias Floral" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-brand-gold text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide">
-                Leve & Solto
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Vestidos)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Vestido Três Marias Floral Solar
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Vestido curto de alcinhas com saia em camadas fluidas e maxiflores douradas sobre fundo azul-marinho.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Tr%C3%AAs%20Marias%20Floral%20Solar" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 6: Conjunto Alfaiataria Oliva -->
-        <article data-category="conjuntos" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-6.jpg" alt="Conjunto Alfaiataria Colete e Calça Oliva" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-brand-espresso text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide">
-                Alfaiataria
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Conjuntos & Alfaiataria)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Conjunto Alfaiataria Verde Oliva
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Colete estruturado com gola e botões frontais coordenado com calça pantalona de alfaiataria. Sofisticação do trabalho ao jantar.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Conjunto%20Alfaiataria%20Verde%20Oliva" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 7: Vestido Longo Poá Off-White e Café -->
-        <article data-category="vestidos" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-7.jpg" alt="Vestido Longo Poá Clássico" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-white/95 text-brand-espresso text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide shadow-xs">
-                Atemporal
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Vestidos)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Vestido Longo Poá Clássico
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Estampa poá marrom sobre fundo creme com lastex nas costas e saia fluida em camadas. Charme clássico que nunca sai de moda.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20o%20Vestido%20Longo%20Po%C3%A1%20Cl%C3%A1ssico" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- CARD 8: Blusa Gola Degagê Cacau + Jeans -->
-        <article data-category="jeans" class="product-card bg-white rounded-2xl overflow-hidden shadow-card border border-brand-blush/60 flex flex-col justify-between group">
-          <div>
-            <div class="relative aspect-[3/4] overflow-hidden bg-brand-sand">
-              <img src="./assets/produto-8.jpg" alt="Blusa Gola Degagê Cacau Texturizada" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 left-3 bg-brand-gold text-white text-[11px] font-semibold px-3 py-1 rounded-full tracking-wide">
-                Versátil
-              </span>
-            </div>
-            <div class="p-4 pb-2">
-              <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
-                <span>★★★★★</span>
-                <span class="text-brand-taupe ml-1">(Jeans & Blusas)</span>
-              </div>
-              <h3 class="font-semibold text-base text-brand-espresso leading-snug">
-                Blusa Degagê Cacau Texturizada
-              </h3>
-              <p class="text-xs text-brand-taupe mt-1.5 leading-relaxed">
-                Malha trabalhada em tom cacau com decote degagê elegante. Peça-chave para combinar com jeans ou alfaiataria.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 pt-3">
-            <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vi%20no%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20Blusa%20Degag%C3%AA%20Cacau%20Texturizada" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-xl transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Consultar no WhatsApp</span>
-            </a>
-          </div>
-        </article>
-
-      </div>
     </div>
   </section>
 
-  <!-- 6. SEÇÃO EDITORIAL SPLIT ("MAIS QUE MODA, UM ESTILO DE VIDA") + FAIXA DE AUTORIDADE -->
-  <section id="sobre" class="bg-brand-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+  <!-- DOBRA 4: ESSÊNCIA DA MARCA + FAIXA DE MÉTRICAS (FIEL À ARQUITETURA DA REFERÊNCIA) -->
+  <section id="sobre" class="bg-white pt-14 sm:pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 sm:pb-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Foto Editorial Esquerda -->
+        <!-- Imagem Lifestyle Esquerda -->
         <div class="lg:col-span-6 relative">
-          <div class="aspect-[4/3] sm:aspect-[16/11] rounded-2xl overflow-hidden bg-brand-sand shadow-soft border border-brand-blush/60">
-            <img src="./assets/produto-6.jpg" alt="Atendimento e Curadoria Loja Brilhante Caratinga" class="w-full h-full object-cover object-top" />
-          </div>
-          <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 bg-brand-espresso/90 backdrop-blur-sm text-white px-5 py-3 rounded-xl">
-            <p class="font-script text-2xl sm:text-3xl text-brand-blush leading-none">
-              Confiante • Elegante • Autêntica
-            </p>
+          <div class="rounded-2xl overflow-hidden aspect-[4/3.4] bg-brand-sand shadow-soft relative">
+            <img id="img-lifestyle" src="" alt="Atendimento Brilhante Caratinga" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-charcoal/45 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+              <p class="font-script text-4xl sm:text-5xl text-white drop-shadow-sm">Autêntica, Elegante & Você</p>
+            </div>
           </div>
         </div>
 
-        <!-- Conteúdo Institucional Direita -->
+        <!-- Texto Institucional Direita -->
         <div class="lg:col-span-6 space-y-5">
-          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block">
-            Mais Que Moda, Um Estilo de Vida
-          </span>
-          <h2 class="font-editorial text-3xl sm:text-4xl lg:text-[44px] font-semibold text-brand-espresso leading-tight">
-            Liderada por mulheres, feita para valorizar cada detalhe de você.
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">Mais Que Moda, Um Estilo de Vida</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-charcoal leading-tight">
+            Uma loja feita por mulheres para valorizar você
           </h2>
-          <p class="text-brand-taupe text-sm sm:text-base leading-relaxed">
-            Sob a gestão de <strong>Daiane Ferreira Stefanon e equipe</strong>, a <strong>Loja Brilhante</strong> tornou-se referência em moda feminina em Caratinga e região. Unimos peças selecionadas, caimento impecável e um atendimento acolhedor que transforma a sua experiência de compra — na loja física ou no conforto da sua casa.
+          <p class="text-brand-muted text-base leading-relaxed">
+            Desde 2020 no coração de Caratinga, sob a liderança de <strong>Daiane Stefanon e equipe</strong>, a Brilhante nasceu com um propósito claro: unir tendências atuais, caimento impecável e um atendimento acolhedor que faz cada cliente se sentir única.
           </p>
 
-          <!-- Grid 2x2 de Infraestrutura & Facilidades -->
+          <!-- 4 Ícones de Infraestrutura e Facilidades (Como na seção "It's a Lifestyle" da referência) -->
           <div class="grid grid-cols-2 gap-4 pt-3">
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center shrink-0 text-brand-gold">
-                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-              </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-cream border border-brand-sand">
+              <i data-lucide="bike" class="w-5 h-5 text-brand-goldDark shrink-0 mt-0.5"></i>
               <div>
-                <h4 class="font-semibold text-sm text-brand-espresso">Delivery & Retirada</h4>
-                <p class="text-xs text-brand-taupe mt-0.5">Receba em casa ou retire na loja</p>
+                <h4 class="text-sm font-semibold text-brand-charcoal">Delivery & Retirada</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Receba em casa ou retire na loja física sem espera.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center shrink-0 text-brand-gold">
-                <i data-lucide="credit-card" class="w-5 h-5"></i>
-              </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-cream border border-brand-sand">
+              <i data-lucide="credit-card" class="w-5 h-5 text-brand-goldDark shrink-0 mt-0.5"></i>
               <div>
-                <h4 class="font-semibold text-sm text-brand-espresso">Pagamento Facilitado</h4>
-                <p class="text-xs text-brand-taupe mt-0.5">Crédito, débito e aproximação</p>
+                <h4 class="text-sm font-semibold text-brand-charcoal">Pagamento Fácil</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Crédito, débito, Pix e aproximação (NFC).</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center shrink-0 text-brand-gold">
-                <i data-lucide="accessibility" class="w-5 h-5"></i>
-              </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-cream border border-brand-sand">
+              <i data-lucide="accessibility" class="w-5 h-5 text-brand-goldDark shrink-0 mt-0.5"></i>
               <div>
-                <h4 class="font-semibold text-sm text-brand-espresso">Espaço Acessível</h4>
-                <p class="text-xs text-brand-taupe mt-0.5">Acesso, assentos e Wi-Fi livre</p>
+                <h4 class="text-sm font-semibold text-brand-charcoal">Espaço Acessível</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Entrada, assentos, Wi-Fi e estacionamento acessível.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center shrink-0 text-brand-gold">
-                <i data-lucide="sparkles" class="w-5 h-5"></i>
-              </div>
+            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-cream border border-brand-sand">
+              <i data-lucide="message-square-heart" class="w-5 h-5 text-brand-goldDark shrink-0 mt-0.5"></i>
               <div>
-                <h4 class="font-semibold text-sm text-brand-espresso">Consultoria via Whats</h4>
-                <p class="text-xs text-brand-taupe mt-0.5">Fotos e medidas na hora</p>
+                <h4 class="text-sm font-semibold text-brand-charcoal">Consultoria Online</h4>
+                <p class="text-xs text-brand-muted mt-0.5">Fotos reais, medidas e provador guiado no WhatsApp.</p>
               </div>
             </div>
           </div>
@@ -667,365 +436,507 @@
       </div>
     </div>
 
-    <!-- Faixa de Métricas / Autoridade (Fiel à barra verde da referência, adaptada para a paleta Brilhante) -->
-    <div class="bg-brand-gold text-white py-9 sm:py-11">
+    <!-- Faixa de Métricas (Reproduzindo a barra dourada/verde da referência) -->
+    <div class="bg-brand-gold text-white py-10 sm:py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/20">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/20">
           <div class="pt-2 sm:pt-0">
-            <p class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold">5,0 ★</p>
-            <p class="text-xs sm:text-sm text-white/90 mt-1 font-medium">Nota Máxima no Google</p>
+            <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">5,0 ★</p>
+            <p class="text-xs sm:text-sm text-white/90 uppercase tracking-wider mt-1 font-medium">Nota Máxima no Google</p>
           </div>
           <div class="pt-4 sm:pt-0">
-            <p class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold">+1.010</p>
-            <p class="text-xs sm:text-sm text-white/90 mt-1 font-medium">Avaliações de Clientes</p>
+            <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">+1.010</p>
+            <p class="text-xs sm:text-sm text-white/90 uppercase tracking-wider mt-1 font-medium">Avaliações Reais</p>
           </div>
-          <div class="pt-4 sm:pt-0">
-            <p class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold">+31 mil</p>
-            <p class="text-xs sm:text-sm text-white/90 mt-1 font-medium">Seguidoras no Instagram</p>
+          <div class="pt-4 lg:pt-0">
+            <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">+31,2 mil</p>
+            <p class="text-xs sm:text-sm text-white/90 uppercase tracking-wider mt-1 font-medium">Seguidoras no Instagram</p>
           </div>
-          <div class="pt-4 sm:pt-0">
-            <p class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold">Desde 2020</p>
-            <p class="text-xs sm:text-sm text-white/90 mt-1 font-medium">Referência em Caratinga</p>
+          <div class="pt-4 lg:pt-0">
+            <p class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold">Desde 2020</p>
+            <p class="text-xs sm:text-sm text-white/90 uppercase tracking-wider mt-1 font-medium">Tradição em Caratinga</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. PROVA SOCIAL / DEPOIMENTOS REAIS -->
-  <section id="avaliacoes" class="py-14 sm:py-20 bg-brand-sand/45">
+  <!-- DOBRA 5: PROVA SOCIAL / AVALIAÇÕES DO GOOGLE (COMO "LOVED BY MODERN WOMEN" DA REFERÊNCIA) -->
+  <section id="avaliacoes" class="py-14 sm:py-20 bg-brand-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <!-- Título Esquerda (Igual à estrutura da referência Aurora) -->
+        <!-- Título Lateral Esquerdo -->
         <div class="lg:col-span-4 space-y-3">
-          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold block">
-            O Que Dizem Nossas Clientes
-          </span>
-          <h2 class="font-editorial text-3xl sm:text-4xl font-semibold text-brand-espresso leading-tight">
-            Amada pelas Mulheres de Caratinga
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">O Que Dizem Nossas Clientes</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-charcoal leading-tight">
+            Amada pelas mulheres de Caratinga
           </h2>
-          <p class="text-sm text-brand-taupe leading-relaxed">
-            Mais de mil avaliações 5 estrelas no Google comprovam nosso compromisso com atendimento próximo e peças apaixonantes.
+          <p class="text-sm text-brand-muted leading-relaxed">
+            Mais de mil avaliações 5 estrelas no Google destacam nosso atendimento carinhoso e a variedade de peças que vestem bem de verdade.
           </p>
           <div class="pt-2">
-            <a href="https://maps.google.com/?q=Av.+Oleg%C3%A1rio+Maciel,+98+-+Centro,+Caratinga+-+MG,+35300-365" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-gold hover:text-brand-goldDark transition">
-              <span>Ver todas as avaliações no Google</span>
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            </a>
+            <span class="inline-flex items-center gap-2 text-xs font-semibold text-brand-goldDark bg-brand-goldLight px-3.5 py-2 rounded-lg">
+              <i data-lucide="info" class="w-4 h-4 shrink-0"></i>
+              <span>Dica: sexta à tarde e sábado de manhã têm maior movimento nos provadores.</span>
+            </span>
           </div>
         </div>
 
         <!-- Cards de Depoimentos Direita -->
-        <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          
-          <div class="bg-white p-5 rounded-2xl shadow-card border border-brand-blush/60 flex flex-col justify-between">
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Depoimento 1 -->
+          <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-card flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-brand-sand text-brand-gold font-editorial font-bold text-lg flex items-center justify-center">
-                  M
-                </div>
-                <div>
-                  <div class="text-amber-400 text-xs">★★★★★</div>
-                  <p class="text-xs font-semibold text-brand-espresso">Mariana S.</p>
-                </div>
+              <div class="flex text-amber-400 mb-3">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
               </div>
-              <p class="text-xs sm:text-[13px] text-brand-taupe leading-relaxed italic">
-                “Atendimento impecável da Daiane e de todas as meninas! As roupas têm um caimento maravilhoso e sempre encontro novidades lindas.”
+              <p class="text-sm text-brand-charcoal/90 italic leading-relaxed">
+                "Atendimento impecável! As meninas são super atenciosas e sempre acertam no que combina comigo. Os vestidos têm um caimento maravilhoso."
               </p>
             </div>
-            <span class="text-[11px] text-brand-gold font-medium mt-4 block">Avaliação Verificada • Google</span>
+            <div class="mt-4 pt-3 border-t border-brand-sand flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-brand-goldLight text-brand-goldDark font-bold text-xs flex items-center justify-center">MC</div>
+              <div>
+                <p class="text-xs font-bold text-brand-charcoal">Mariana Costa</p>
+                <p class="text-[11px] text-brand-muted">Avaliação via Google</p>
+              </div>
+            </div>
           </div>
 
-          <div class="bg-white p-5 rounded-2xl shadow-card border border-brand-blush/60 flex flex-col justify-between">
+          <!-- Depoimento 2 -->
+          <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-card flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-brand-sand text-brand-gold font-editorial font-bold text-lg flex items-center justify-center">
-                  C
-                </div>
-                <div>
-                  <div class="text-amber-400 text-xs">★★★★★</div>
-                  <p class="text-xs font-semibold text-brand-espresso">Camila R.</p>
-                </div>
+              <div class="flex text-amber-400 mb-3">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
               </div>
-              <p class="text-xs sm:text-[13px] text-brand-taupe leading-relaxed italic">
-                “Minha loja favorita em Caratinga! Quando não consigo ir ao Centro, peço pelo WhatsApp e chega tudo certinho e cheiroso em casa.”
+              <p class="text-sm text-brand-charcoal/90 italic leading-relaxed">
+                "Compro tanto na loja quanto pelo WhatsApp. O delivery chega super rápido aqui em Caratinga e as peças em alfaiataria são perfeitas para trabalhar."
               </p>
             </div>
-            <span class="text-[11px] text-brand-gold font-medium mt-4 block">Avaliação Verificada • Google</span>
+            <div class="mt-4 pt-3 border-t border-brand-sand flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-brand-goldLight text-brand-goldDark font-bold text-xs flex items-center justify-center">FA</div>
+              <div>
+                <p class="text-xs font-bold text-brand-charcoal">Fernanda Almeida</p>
+                <p class="text-[11px] text-brand-muted">Avaliação via Google</p>
+              </div>
+            </div>
           </div>
 
-          <div class="bg-white p-5 rounded-2xl shadow-card border border-brand-blush/60 flex flex-col justify-between">
+          <!-- Depoimento 3 -->
+          <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-card flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-3 mb-3">
-                <div class="w-10 h-10 rounded-full bg-brand-sand text-brand-gold font-editorial font-bold text-lg flex items-center justify-center">
-                  F
-                </div>
-                <div>
-                  <div class="text-amber-400 text-xs">★★★★★</div>
-                  <p class="text-xs font-semibold text-brand-espresso">Fernanda A.</p>
-                </div>
+              <div class="flex text-amber-400 mb-3">
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
               </div>
-              <p class="text-xs sm:text-[13px] text-brand-taupe leading-relaxed italic">
-                “Variedade incrível de vestidos e conjuntos. A loja é super acolhedora e a equipe tem muito bom gosto para ajudar a montar o look.”
+              <p class="text-sm text-brand-charcoal/90 italic leading-relaxed">
+                "Variedade incrível e sempre com novidades! Adoro a loja física no Centro, ambiente super agradável e acolhedor."
               </p>
             </div>
-            <span class="text-[11px] text-brand-gold font-medium mt-4 block">Avaliação Verificada • Google</span>
+            <div class="mt-4 pt-3 border-t border-brand-sand flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-brand-goldLight text-brand-goldDark font-bold text-xs flex items-center justify-center">CS</div>
+              <div>
+                <p class="text-xs font-bold text-brand-charcoal">Camila Silva</p>
+                <p class="text-[11px] text-brand-muted">Avaliação via Google</p>
+              </div>
+            </div>
           </div>
-
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- 8. LOCALIZAÇÃO, HORÁRIOS E BANNER DE CONVERSÃO (SEM DATAS PERECÍVEIS) -->
-  <section id="localizacao" class="py-14 sm:py-20 bg-brand-cream">
+  <!-- DOBRA 6: LOCALIZAÇÃO, HORÁRIOS E CONVERSÃO PRESENCIAL/ONLINE -->
+  <section id="localizacao" class="py-14 sm:py-20 bg-white border-t border-brand-sand">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Banner CTA Estilo Newsletter da Referência, adaptado para Comunidade VIP WhatsApp -->
-      <div class="bg-brand-espresso text-brand-cream rounded-3xl p-6 sm:p-10 lg:p-12 mb-12 shadow-soft flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-        <div class="max-w-xl space-y-2">
-          <div class="inline-flex items-center gap-2 text-brand-gold text-xs font-semibold uppercase tracking-widest">
-            <i data-lucide="sparkles" class="w-4 h-4"></i>
-            <span>Atendimento Personalizado</span>
-          </div>
-          <h2 class="font-editorial text-3xl sm:text-4xl font-semibold leading-tight">
-            Quer ver mais opções no seu tamanho?
-          </h2>
-          <p class="text-brand-blush/90 text-sm sm:text-base">
-            Fale diretamente com nossa equipe no WhatsApp. Enviamos fotos reais, medidas e opções de entrega rápida em Caratinga.
+      <!-- Banner CTA Dourado (Reproduzindo a barra arredondada inferior da referência) -->
+      <div class="rounded-3xl bg-brand-gold text-white p-7 sm:p-10 mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-soft">
+        <div class="text-center lg:text-left max-w-xl">
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold">Quer ver as novidades no seu tamanho?</h2>
+          <p class="text-white/90 text-sm sm:text-base mt-1.5">
+            Fale agora com nossa equipe pelo WhatsApp. Enviamos fotos, vídeos detalhados e entregamos no seu endereço em Caratinga.
           </p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
-          <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Gostaria%20de%20receber%20atendimento%20personalizado%20da%20Loja%20Brilhante." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white font-semibold px-7 py-4 rounded-full transition text-sm sm:text-base shrink-0">
-            <i data-lucide="message-circle" class="w-5 h-5"></i>
-            <span>Chamar no (33) 99916-2686</span>
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+          <a href="#" data-wa-default class="inline-flex items-center justify-center gap-2 bg-white text-brand-charcoal hover:bg-brand-cream font-bold px-7 py-3.5 rounded-full shadow-sm transition-transform hover:-translate-y-0.5 text-sm">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600"></i>
+            <span>(33) 99916-2686</span>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Oleg%C3%A1rio+Maciel,+98+-+Centro,+Caratinga+-+MG,+35300-365" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-brand-goldDark/60 hover:bg-brand-goldDark text-white border border-white/30 font-semibold px-6 py-3.5 rounded-full transition-colors text-sm">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>Abrir Rota no Maps</span>
           </a>
         </div>
       </div>
 
-      <!-- Grid de Endereço + Horários + Mapa -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        
-        <!-- Card Informações Físicas -->
-        <div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 border border-brand-blush/70 shadow-card flex flex-col justify-between space-y-6">
-          <div class="space-y-5">
-            <div>
-              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">Visite Nossa Loja</span>
-              <h3 class="font-editorial text-2xl sm:text-3xl font-semibold text-brand-espresso mt-1">
-                No Coração de Caratinga
-              </h3>
-            </div>
-
-            <!-- Endereço -->
-            <div class="flex items-start gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center text-brand-gold shrink-0 mt-0.5">
-                <i data-lucide="map-pin" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <h4 class="font-semibold text-sm text-brand-espresso">Endereço Oficial</h4>
-                <p class="text-sm text-brand-taupe mt-0.5 leading-relaxed">
-                  Av. Olegário Maciel, 98 (Loja 02) – Centro<br>
-                  Caratinga/MG • CEP 35300-365
-                </p>
-              </div>
-            </div>
-
-            <!-- Horários -->
-            <div class="flex items-start gap-3.5">
-              <div class="w-10 h-10 rounded-xl bg-brand-sand flex items-center justify-center text-brand-gold shrink-0 mt-0.5">
-                <i data-lucide="clock" class="w-5 h-5"></i>
-              </div>
-              <div class="space-y-1.5 text-sm">
-                <h4 class="font-semibold text-brand-espresso">Horário de Funcionamento</h4>
-                <p class="text-brand-taupe">
-                  <strong class="text-brand-espresso font-medium">Loja Física:</strong> Seg a Sex das 9h às 19h • Sáb das 9h às 13h
-                </p>
-                <p class="text-brand-taupe">
-                  <strong class="text-brand-espresso font-medium">Online & Delivery:</strong> Seg a Sex das 9h às 19h • Sáb das 9h às 12h
-                </p>
-                <p class="text-xs text-brand-gold bg-brand-sand/70 px-3 py-1.5 rounded-lg inline-block mt-1">
-                  Dica: Sexta à tarde e sábado de manhã têm maior movimento nos provadores.
-                </p>
-              </div>
-            </div>
+      <!-- Cards de Endereço, Horário Loja Física e Horário Online/Delivery -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card Endereço -->
+        <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sand">
+          <div class="w-10 h-10 rounded-xl bg-brand-goldLight text-brand-goldDark flex items-center justify-center mb-4">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
           </div>
-
-          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Oleg%C3%A1rio+Maciel,+98+-+Centro,+Caratinga+-+MG,+35300-365" target="_blank" rel="noopener" class="w-full inline-flex items-center justify-center gap-2 bg-brand-espresso hover:bg-brand-espresso/90 text-white font-semibold py-3.5 px-5 rounded-xl transition text-sm">
-            <i data-lucide="navigation" class="w-4 h-4 text-brand-gold"></i>
-            <span>Abrir Rota no Google Maps</span>
+          <h3 class="font-serif text-2xl font-semibold text-brand-charcoal">Onde Estamos</h3>
+          <p class="text-sm text-brand-charcoal font-medium mt-2">Av. Olegário Maciel, 98 (Loja 02)</p>
+          <p class="text-sm text-brand-muted">Centro, Caratinga/MG — CEP 35300-365</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Oleg%C3%A1rio+Maciel,+98+-+Centro,+Caratinga+-+MG,+35300-365" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-brand-goldDark hover:underline mt-4">
+            <span>Traçar rota no Google Maps</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
           </a>
         </div>
 
-        <!-- Mapa Interativo Embed -->
-        <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-brand-blush/70 shadow-card min-h-[320px] bg-brand-sand">
-          <iframe 
-            title="Mapa Loja Brilhante Caratinga - Av. Olegário Maciel, 98"
-            src="https://www.google.com/maps?q=Av.+Oleg%C3%A1rio+Maciel,+98+-+Centro,+Caratinga+-+MG,+35300-365&output=embed"
-            class="w-full h-full min-h-[320px] border-0"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+        <!-- Card Horário Loja Física -->
+        <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sand">
+          <div class="w-10 h-10 rounded-xl bg-brand-goldLight text-brand-goldDark flex items-center justify-center mb-4">
+            <i data-lucide="store" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-semibold text-brand-charcoal">Loja Física</h3>
+          <ul class="text-sm text-brand-muted space-y-1.5 mt-2">
+            <li class="flex justify-between">
+              <span>Segunda a Sexta:</span>
+              <strong class="text-brand-charcoal">09h às 19h</strong>
+            </li>
+            <li class="flex justify-between">
+              <span>Sábado:</span>
+              <strong class="text-brand-charcoal">09h às 13h</strong>
+            </li>
+            <li class="flex justify-between text-xs pt-1 text-brand-goldDark">
+              <span>Domingo:</span>
+              <span>Fechado</span>
+            </li>
+          </ul>
         </div>
 
+        <!-- Card Atendimento Online & Delivery -->
+        <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sand">
+          <div class="w-10 h-10 rounded-xl bg-brand-goldLight text-brand-goldDark flex items-center justify-center mb-4">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-semibold text-brand-charcoal">Online & Delivery</h3>
+          <ul class="text-sm text-brand-muted space-y-1.5 mt-2">
+            <li class="flex justify-between">
+              <span>Segunda a Sexta:</span>
+              <strong class="text-brand-charcoal">09h às 19h</strong>
+            </li>
+            <li class="flex justify-between">
+              <span>Sábado:</span>
+              <strong class="text-brand-charcoal">09h às 12h</strong>
+            </li>
+            <li class="flex justify-between text-xs pt-1 text-brand-goldDark">
+              <span>WhatsApp Oficial:</span>
+              <strong>(33) 99916-2686</strong>
+            </li>
+          </ul>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- 9. RODAPÉ INSTITUCIONAL COMPLETO -->
-  <footer class="bg-brand-sand/80 border-t border-brand-blush text-brand-espresso pt-14 pb-24 sm:pb-12">
+  <!-- RODAPÉ INSTITUCIONAL (4 COLUNAS COMO A REFERÊNCIA) -->
+  <footer class="bg-brand-cream border-t border-brand-sand pt-12 pb-24 sm:pb-12 text-sm text-brand-muted">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-10 border-b border-brand-blush">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-brand-charcoal/10">
         
-        <!-- Coluna 1: Marca e Slogan -->
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full border border-brand-gold/40 bg-white flex items-center justify-center overflow-hidden">
-              <img src="./assets/logo.png" alt="Logo Brilhante" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-              <span class="hidden font-editorial text-brand-gold font-bold text-base">B</span>
-            </div>
-            <span class="font-editorial text-2xl font-semibold tracking-[0.14em] uppercase">BRILHANTE</span>
-          </div>
-          <p class="text-sm text-brand-taupe leading-relaxed">
-            Referência em moda feminina em Caratinga/MG. <strong>Para nós, o que importa é você!</strong>
+        <!-- Coluna 1: Marca -->
+        <div class="space-y-3">
+          <span class="font-serif text-2xl font-bold tracking-[0.14em] text-brand-charcoal uppercase block">Brilhante</span>
+          <p class="text-xs leading-relaxed">
+            Referência em moda feminina em Caratinga/MG. Para nós, o que importa é você!
           </p>
           <div class="flex items-center gap-3 pt-1">
-            <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener" aria-label="Instagram Principal" class="w-9 h-9 rounded-full bg-white border border-brand-blush flex items-center justify-center text-brand-espresso hover:bg-brand-gold hover:text-white transition">
+            <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white border border-brand-sand flex items-center justify-center text-brand-charcoal hover:text-brand-gold transition-colors">
               <i data-lucide="instagram" class="w-4 h-4"></i>
             </a>
-            <a href="https://wa.me/5533999162686" target="_blank" rel="noopener" aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white border border-brand-blush flex items-center justify-center text-brand-espresso hover:bg-brand-gold hover:text-white transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Brilhante Caratinga" class="w-9 h-9 rounded-full bg-white border border-brand-blush flex items-center justify-center text-brand-espresso hover:bg-brand-gold hover:text-white transition">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white border border-brand-sand flex items-center justify-center text-brand-charcoal hover:text-brand-gold transition-colors">
               <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="#" data-wa-default aria-label="WhatsApp" class="w-9 h-9 rounded-full bg-white border border-brand-sand flex items-center justify-center text-brand-charcoal hover:text-emerald-600 transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
             </a>
           </div>
         </div>
 
-        <!-- Coluna 2: Categorias -->
+        <!-- Coluna 2: Coleções -->
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-brand-espresso mb-4">Categorias</h4>
-          <ul class="space-y-2.5 text-sm text-brand-taupe">
-            <li><a href="#vitrine" class="hover:text-brand-gold transition">Vestidos Casuais e Festa</a></li>
-            <li><a href="#vitrine" class="hover:text-brand-gold transition">Conjuntos & Alfaiataria</a></li>
-            <li><a href="#vitrine" class="hover:text-brand-gold transition">Jeans & Blusas</a></li>
-            <li><a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener" class="hover:text-brand-gold transition">Linha Fitness (@brilhantefitness)</a></li>
+          <h4 class="font-semibold text-brand-charcoal mb-3">Categorias</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#vitrine" onclick="filtrarCategoria('Vestidos')" class="hover:text-brand-gold transition-colors">Vestidos Casuais & Festa</a></li>
+            <li><a href="#vitrine" onclick="filtrarCategoria('Alfaiataria')" class="hover:text-brand-gold transition-colors">Conjuntos & Alfaiataria</a></li>
+            <li><a href="#vitrine" onclick="filtrarCategoria('Jeans')" class="hover:text-brand-gold transition-colors">Jeans & All Jeans</a></li>
+            <li><a href="#vitrine" onclick="filtrarCategoria('Blusas')" class="hover:text-brand-gold transition-colors">Blusas & Tops</a></li>
+            <li><a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors">Linha Fitness (@brilhantefitness)</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Atendimento -->
         <div>
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-brand-espresso mb-4">Atendimento</h4>
-          <ul class="space-y-2.5 text-sm text-brand-taupe">
-            <li><a href="https://wa.me/5533999162686" target="_blank" rel="noopener" class="hover:text-brand-gold transition">WhatsApp: (33) 99916-2686</a></li>
-            <li><a href="#localizacao" class="hover:text-brand-gold transition">Av. Olegário Maciel, 98 – Loja 02</a></li>
-            <li><a href="#localizacao" class="hover:text-brand-gold transition">Delivery e Retirada na Loja</a></li>
-            <li><a href="#avaliacoes" class="hover:text-brand-gold transition">Avaliações Google (5,0 ★)</a></li>
+          <h4 class="font-semibold text-brand-charcoal mb-3">Atendimento</h4>
+          <ul class="space-y-2 text-xs">
+            <li>WhatsApp: (33) 99916-2686</li>
+            <li>Av. Olegário Maciel, 98 (Loja 02)</li>
+            <li>Centro, Caratinga/MG • 35300-365</li>
+            <li>Seg a Sex: 9h às 19h | Sáb: 9h às 13h</li>
           </ul>
         </div>
 
-        <!-- Coluna 4: Dados Cadastrais e Pagamento -->
-        <div class="space-y-3">
-          <h4 class="font-semibold text-sm uppercase tracking-wider text-brand-espresso mb-4">Institucional</h4>
-          <p class="text-xs text-brand-taupe leading-relaxed">
-            <strong>Loja Brilhante Caratinga</strong><br>
-            Stefanon & Souza Confecções LTDA<br>
-            CNPJ: 38.385.739/0001-31<br>
-            Gestão: Daiane Ferreira Stefanon e equipe
-          </p>
-          <div class="pt-2">
-            <span class="text-[11px] font-semibold uppercase tracking-wider text-brand-espresso block mb-2">Formas de Pagamento</span>
-            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-brand-taupe">
-              <span class="bg-white border border-brand-blush px-2.5 py-1 rounded-md">Crédito</span>
-              <span class="bg-white border border-brand-blush px-2.5 py-1 rounded-md">Débito</span>
-              <span class="bg-white border border-brand-blush px-2.5 py-1 rounded-md">Aproximação (NFC)</span>
-              <span class="bg-white border border-brand-blush px-2.5 py-1 rounded-md">Pix</span>
-            </div>
+        <!-- Coluna 4: Facilidades & Dados Cadastrais -->
+        <div>
+          <h4 class="font-semibold text-brand-charcoal mb-3">Formas de Pagamento</h4>
+          <div class="flex flex-wrap gap-2 text-xs font-medium text-brand-charcoal mb-4">
+            <span class="px-2.5 py-1 bg-white rounded border border-brand-sand">Cartão de Crédito</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-brand-sand">Débito</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-brand-sand">Pix</span>
+            <span class="px-2.5 py-1 bg-white rounded border border-brand-sand">Aproximação (NFC)</span>
           </div>
+          <p class="text-[11px] text-brand-muted leading-relaxed">
+            Stefanon & Souza Confecções LTDA<br />
+            CNPJ: 38.385.739/0001-31
+          </p>
         </div>
 
       </div>
 
-      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-taupe gap-2">
-        <p>© <span id="current-year"></span> Loja Brilhante Caratinga. Todos os direitos reservados.</p>
-        <p>Referência em Moda Feminina • Caratinga/MG</p>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs gap-2">
+        <p>© <span id="ano-atual"></span> Loja Brilhante Caratinga. Todos os direitos reservados.</p>
+        <p class="text-brand-goldDark font-medium">Referência em Moda Feminina • Para nós, o que importa é você!</p>
       </div>
     </div>
   </footer>
 
-  <!-- 10. BOTÃO FLUTUANTE FIXO DO WHATSAPP (CONVERSÃO DIRETA) -->
-  <a href="https://wa.me/5533999162686?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Loja%20Brilhante%20Caratinga%20e%20gostaria%20de%20atendimento." 
-     target="_blank" 
-     rel="noopener" 
-     aria-label="Falar com a Loja Brilhante no WhatsApp"
-     class="fixed bottom-5 right-5 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold px-4 py-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-lg hover:scale-105 transition-all duration-300">
-    <i data-lucide="message-circle" class="w-6 h-6 fill-white/20"></i>
-    <span class="text-xs sm:text-sm pr-1">Falar no WhatsApp</span>
+  <!-- BOTÃO FLUTUANTE FIXO WHATSAPP (CANTO INFERIOR DIREITO) -->
+  <a href="#" data-wa-default aria-label="Falar com a Brilhante Caratinga no WhatsApp" class="whatsapp-pulse fixed bottom-5 right-5 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-4 py-3.5 sm:px-5 rounded-full shadow-lg transition-transform hover:scale-105">
+    <i data-lucide="message-circle" class="w-6 h-6 fill-white text-[#25D366]"></i>
+    <span class="hidden sm:inline text-sm">Falar com Consultora</span>
   </a>
 
-  <!-- SCRIPTS PUROS: Ícones, Menu Mobile e Filtro de Vitrine -->
+  <!-- SCRIPT CENTRALIZADO: IMAGENS, CATÁLOGO E CONVERSÃO WHATSAPP -->
   <script>
-    // Inicializa ícones Lucide
-    lucide.createIcons();
+    /**
+     * =========================================================================
+     * CENTRAL DE IMAGENS DA LOJA BRILHANTE CARATINGA
+     * Substitua os links Unsplash abaixo pelas URLs diretas das fotos reais
+     * enviadas no chat sempre que desejar.
+     * =========================================================================
+     */
+    const IMAGENS = {
+      // Foto de destaque da primeira dobra (Hero) -> Pode usar a foto do Conjunto Alfaiataria Oliva (image_8e031f.jpg)
+      hero: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85",
 
-    // Ano dinâmico no rodapé
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+      // Imagens das Categorias
+      catVestidos: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80",
+      catAlfaiataria: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80",
+      catBlusas: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=600&q=80",
+      catJeans: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
+      catFitness: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80",
 
-    // Controle do Menu Mobile
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
+      // Foto Institucional ("Mais Que Moda, Um Estilo de Vida")
+      lifestyle: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+      // FOTOS DOS PRODUTOS REAIS ANEXADOS NO CHAT:
+      // 1. image_8dffbc.jpg -> Vestido Longo Frente Única Floral Azul Marinho
+      produto1: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=700&q=80",
+      // 2. image_8e0000.jpg -> Conjunto Linho Off-White com Bordado Floral Azul (Peplum + Pantalona)
+      produto2: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80",
+      // 3. image_8e031f.jpg -> Conjunto Alfaiataria Oliva/Cáqui (Colete Botões + Calça Pantalona)
+      produto3: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80",
+      // 4. image_8e0328.jpg -> Vestido Longo Off-White Poá Marrom Três Marias
+      produto4: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80",
+      // 5. image_8e0075.jpg -> Vestido Curto Floral Solar Azul Marinho
+      produto5: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=700&q=80",
+      // 6. image_8e001e.jpg -> Blusa Frente Única Rosa Bebê Texturizada + Jeans Wide Leg
+      produto6: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80",
+      // 7. image_8e0361.jpg -> Blusa Frente Única Gola Degagê Marrom Cacau
+      produto7: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=700&q=80",
+      // 8. image_8dffdf.jpg -> Blusa Básica Cap Sleeve Marrom Café + Bermuda Jeans
+      produto8: "https://images.unsplash.com/photo-1582418702059-97ebafb35d09?auto=format&fit=crop&w=700&q=80"
+    };
 
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
+    // Configuração Oficial do WhatsApp
+    const WHATSAPP_NUMERO = "5533999162686";
+    const MENSAGEM_PADRAO = "Olá! Vim pelo site da Brilhante Caratinga e gostaria de ver as novidades disponíveis.";
 
-    // Filtro Interativo da Vitrine
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const productCards = document.querySelectorAll('.product-card');
-    const categoryTriggers = document.querySelectorAll('[data-filter-trigger]');
-
-    function applyFilter(category) {
-      // Atualiza visual dos botões
-      filterBtns.forEach(btn => {
-        if (btn.dataset.filter === category) {
-          btn.classList.remove('bg-white', 'text-brand-espresso', 'border', 'border-brand-blush');
-          btn.classList.add('bg-brand-espresso', 'text-white');
-        } else {
-          btn.classList.add('bg-white', 'text-brand-espresso', 'border', 'border-brand-blush');
-          btn.classList.remove('bg-brand-espresso', 'text-white');
-        }
-      });
-
-      // Filtra cards
-      productCards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'flex';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    function gerarLinkWhatsApp(mensagem) {
+      return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
     }
 
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        applyFilter(btn.dataset.filter);
+    // Catálogo estruturado fielmente a partir das 8 fotos de produtos enviadas
+    const PRODUTOS = [
+      {
+        id: 1,
+        nome: "Vestido Longo Floral Botânico Marinho",
+        categoria: "Vestidos",
+        tag: "Carro-chefe",
+        descricao: "Modelagem frente única com busto drapeado e estampa floral barrada em tons terrosos.",
+        imagem: IMAGENS.produto1
+      },
+      {
+        id: 2,
+        nome: "Conjunto Linho Off-White Bordado Azul",
+        categoria: "Alfaiataria",
+        tag: "Destaque",
+        descricao: "Top tomara-que-caia peplum com calça pantalona fluida e bordados florais na barra.",
+        imagem: IMAGENS.produto2
+      },
+      {
+        id: 3,
+        nome: "Conjunto Alfaiataria Oliva Colete & Pantalona",
+        categoria: "Alfaiataria",
+        tag: "Mais Pedido",
+        descricao: "Colete estruturado com gola e botões frontais acompanhado de calça pantalona de corte impecável.",
+        imagem: IMAGENS.produto3
+      },
+      {
+        id: 4,
+        nome: "Vestido Longo Off-White Poá Marrom",
+        categoria: "Vestidos",
+        tag: "Atemporal",
+        descricao: "Alças finas, lastex nas costas para ajuste perfeito e saia fluida em camadas três marias.",
+        imagem: IMAGENS.produto4
+      },
+      {
+        id: 5,
+        nome: "Vestido Curto Floral Solar Marinho",
+        categoria: "Vestidos",
+        tag: "Leve & Fresco",
+        descricao: "Alcinhas delicadas, caimento soltinho em três marias e estampa floral vibrante.",
+        imagem: IMAGENS.produto5
+      },
+      {
+        id: 6,
+        nome: "Combo Blusa Texturizada Rosa + Wide Leg Jeans",
+        categoria: "Jeans",
+        tag: "Look Completo",
+        descricao: "Blusa frente única em textura delicada combinada com calça jeans wide leg de cintura alta.",
+        imagem: IMAGENS.produto6
+      },
+      {
+        id: 7,
+        nome: "Blusa Frente Única Gola Degagê Cacau",
+        categoria: "Blusas",
+        tag: "Versátil",
+        descricao: "Tecido texturizado sofisticado no tom marrom cacau, ideal para compor looks do trabalho ao jantar.",
+        imagem: IMAGENS.produto7
+      },
+      {
+        id: 8,
+        nome: "Combo Blusa Cap Sleeve Café + Bermuda Jeans",
+        categoria: "Jeans",
+        tag: "Tendência",
+        descricao: "Blusa básica ajustada em marrom café com bermuda jeans moderna de barra desfiada.",
+        imagem: IMAGENS.produto8
+      }
+    ];
+
+    // Preenche as imagens fixas da página
+    document.getElementById("img-hero").src = IMAGENS.hero;
+    document.getElementById("img-cat-vestidos").src = IMAGENS.catVestidos;
+    document.getElementById("img-cat-alfaiataria").src = IMAGENS.catAlfaiataria;
+    document.getElementById("img-cat-blusas").src = IMAGENS.catBlusas;
+    document.getElementById("img-cat-jeans").src = IMAGENS.catJeans;
+    document.getElementById("img-cat-fitness").src = IMAGENS.catFitness;
+    document.getElementById("img-lifestyle").src = IMAGENS.lifestyle;
+
+    // Atualiza links globais de WhatsApp
+    document.querySelectorAll("[data-wa-default]").forEach(el => {
+      el.href = gerarLinkWhatsApp(MENSAGEM_PADRAO);
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+    });
+
+    document.querySelectorAll("[data-wa-fitness]").forEach(el => {
+      el.href = gerarLinkWhatsApp("Olá! Vi no site da Brilhante Caratinga e gostaria de conhecer as peças da linha @brilhantefitness.");
+      el.target = "_blank";
+      el.rel = "noopener noreferrer";
+    });
+
+    // Renderiza os cards da vitrine
+    const gridProdutos = document.getElementById("grid-produtos");
+
+    function renderizarProdutos(categoriaSelecionada = "Todos") {
+      const filtrados = categoriaSelecionada === "Todos"
+        ? PRODUTOS
+        : PRODUTOS.filter(p => p.categoria === categoriaSelecionada);
+
+      gridProdutos.innerHTML = filtrados.map(produto => {
+        const msgItem = `Olá! Vi no site da Brilhante Caratinga e gostaria de saber mais sobre: *${produto.nome}*`;
+        const linkWa = gerarLinkWhatsApp(msgItem);
+
+        return `
+          <article class="group bg-white rounded-2xl border border-brand-sand overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative aspect-[3/4] bg-brand-sand overflow-hidden">
+                <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-brand-goldDark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
+                  ${produto.tag}
+                </span>
+              </div>
+              <div class="p-4 sm:p-5">
+                <span class="text-[11px] font-semibold uppercase tracking-widest text-brand-goldDark">${produto.categoria}</span>
+                <h3 class="font-serif text-xl font-semibold text-brand-charcoal mt-0.5 leading-snug group-hover:text-brand-goldDark transition-colors">
+                  ${produto.nome}
+                </h3>
+                <p class="text-xs text-brand-muted mt-1.5 leading-relaxed">
+                  ${produto.descricao}
+                </p>
+              </div>
+            </div>
+            <div class="px-4 pb-4 sm:px-5 sm:pb-5 pt-1">
+              <a href="${linkWa}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-brand-cream hover:bg-brand-gold text-brand-charcoal hover:text-white border border-brand-gold/30 hover:border-brand-gold font-semibold text-xs sm:text-sm py-3 px-4 rounded-xl transition-all">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Consultar no WhatsApp</span>
+              </a>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      lucide.createIcons();
+    }
+
+    // Controle dos botões de filtro
+    function filtrarCategoria(categoria) {
+      document.querySelectorAll(".filter-btn").forEach(btn => {
+        const ativo = btn.getAttribute("data-filter") === categoria;
+        btn.classList.toggle("bg-brand-gold", ativo);
+        btn.classList.toggle("text-white", ativo);
+        btn.classList.toggle("shadow-xs", ativo);
+        btn.classList.toggle("bg-white", !ativo);
+        btn.classList.toggle("text-brand-charcoal", !ativo);
+      });
+
+      renderizarProdutos(categoria);
+
+      const secaoVitrine = document.getElementById("vitrine");
+      if (secaoVitrine) {
+        secaoVitrine.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        filtrarCategoria(btn.getAttribute("data-filter"));
       });
     });
 
-    categoryTriggers.forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const targetCat = trigger.dataset.filterTrigger;
-        applyFilter(targetCat);
-      });
-    });
+    // Inicialização
+    document.getElementById("ano-atual").textContent = new Date().getFullYear();
+    renderizarProdutos("Todos");
+    lucide.createIcons();
   </script>
 </body>
 </html>
