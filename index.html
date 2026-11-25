@@ -11,7 +11,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Brilhante Caratinga — Referência em Moda Feminina" />
   <meta property="og:description" content="Para nós, o que importa é você! Confira nossa curadoria oficial de vestidos, alfaiataria, jeans e moda fitness. Atendimento personalizado e delivery em Caratinga/MG." />
-  <meta property="og:image" content="https://i.postimg.cc/tsNFNZTV/Um-conjunto-clean-e-estiloso.jpg" />
+  <meta property="og:image" content="https://i.postimg.cc/2SPTmnNn/Captura-de-tela-2026-11-25-160031.jpg" />
   <meta property="og:locale" content="pt_BR" />
 
   <!-- Google Fonts -->
@@ -61,14 +61,6 @@
       background: rgba(250, 247, 245, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-    }
-
-    /* Melhora a nitidez e contraste de fotos verticais */
-    .foto-nitida {
-      image-rendering: -webkit-optimize-contrast;
-      backface-visibility: hidden;
-      transform: translateZ(0);
-      filter: contrast(1.03) saturate(1.04);
     }
 
     @keyframes pulse-ring {
@@ -124,7 +116,6 @@
 
       <div class="flex items-center gap-2.5 sm:gap-4">
         <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener noreferrer" aria-label="Instagram Brilhante Caratinga" class="p-2 text-brand-charcoal/80 hover:text-brand-gold transition-colors">
-          <!-- SVG Instagram -->
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
         </a>
         <a href="#" data-wa-default class="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-goldDark text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full shadow-sm transition-all hover:-translate-y-0.5">
@@ -198,7 +189,7 @@
         <div class="lg:col-span-6 relative">
           <div class="relative mx-auto max-w-sm lg:max-w-md">
             <div onclick="abrirModalFoto(IMAGENS.hero, 'Conjunto Alfaiataria Oliva Colete & Pantalona', 'Colete estruturado com gola e botões frontais acompanhado de calça pantalona de corte impecável.')" class="cursor-zoom-in relative rounded-2xl overflow-hidden shadow-soft aspect-[3/4] bg-brand-sand group">
-              <img id="img-hero" src="" alt="Moda Feminina Brilhante Caratinga" class="w-full h-full object-cover object-top foto-nitida" />
+              <img id="img-hero" src="" alt="Moda Feminina Brilhante Caratinga" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent"></div>
               
               <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
@@ -245,7 +236,7 @@
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
         <button onclick="filtrarCategoria('Vestidos')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/3.8] bg-brand-sand mb-3 relative shadow-xs">
-            <img id="img-cat-vestidos" src="" alt="Vestidos Brilhante Caratinga" class="w-full h-full object-cover object-top foto-nitida" />
+            <img id="img-cat-vestidos" src="" alt="Vestidos Brilhante Caratinga" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
             <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Vestidos</span>
@@ -255,7 +246,7 @@
 
         <button onclick="filtrarCategoria('Alfaiataria')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/3.8] bg-brand-sand mb-3 relative shadow-xs">
-            <img id="img-cat-alfaiataria" src="" alt="Conjuntos e Alfaiataria" class="w-full h-full object-cover object-top foto-nitida" />
+            <img id="img-cat-alfaiataria" src="" alt="Conjuntos e Alfaiataria" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
             <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Alfaiataria</span>
@@ -265,7 +256,7 @@
 
         <button onclick="filtrarCategoria('Blusas')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/3.8] bg-brand-sand mb-3 relative shadow-xs">
-            <img id="img-cat-blusas" src="" alt="Blusas Femininas" class="w-full h-full object-cover object-top foto-nitida" />
+            <img id="img-cat-blusas" src="" alt="Blusas Femininas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
             <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Blusas & Tops</span>
@@ -275,7 +266,7 @@
 
         <button onclick="filtrarCategoria('Jeans')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/3.8] bg-brand-sand mb-3 relative shadow-xs">
-            <img id="img-cat-jeans" src="" alt="Jeans Feminino" class="w-full h-full object-cover object-top foto-nitida" />
+            <img id="img-cat-jeans" src="" alt="Jeans Feminino" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div class="flex items-center justify-between px-0.5">
             <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Jeans</span>
@@ -285,7 +276,7 @@
 
         <a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener noreferrer" class="group text-left col-span-2 sm:col-span-1">
           <div class="rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[3/3.8] bg-brand-sand mb-3 relative shadow-xs">
-            <img id="img-cat-fitness" src="" alt="Brilhante Fitness" class="w-full h-full object-cover object-center foto-nitida" />
+            <img id="img-cat-fitness" src="" alt="Brilhante Fitness" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
             <span class="absolute top-2.5 left-2.5 bg-white/90 backdrop-blur-xs text-[10px] font-bold uppercase tracking-wider text-brand-goldDark px-2.5 py-1 rounded-full">
               @brilhantefitness
             </span>
@@ -366,7 +357,7 @@
         
         <div class="lg:col-span-6 relative">
           <div onclick="abrirModalFoto(IMAGENS.lifestyle, 'Conjunto Linho Off-White Bordado Azul', 'Top tomara-que-caia peplum com calça pantalona fluida e bordados florais na barra.')" class="cursor-zoom-in rounded-2xl overflow-hidden aspect-[3/3.6] max-w-md mx-auto bg-brand-sand shadow-soft relative">
-            <img id="img-lifestyle" src="" alt="Atendimento Brilhante Caratinga" class="w-full h-full object-cover object-top foto-nitida" />
+            <img id="img-lifestyle" src="" alt="Atendimento Brilhante Caratinga" class="w-full h-full object-cover object-top" />
             <div class="absolute inset-0 bg-gradient-to-tr from-brand-charcoal/45 via-transparent to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white">
               <p class="font-script text-4xl sm:text-5xl text-white drop-shadow-sm">Autêntica, Elegante & Você</p>
@@ -631,7 +622,6 @@
           <p class="text-xs leading-relaxed">
             Referência em moda feminina em Caratinga/MG. Para nós, o que importa é você!
           </p>
-          <!-- Ícones Sociais SVG Nativos (100% visíveis) -->
           <div class="flex items-center gap-3 pt-1">
             <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white border border-brand-sand flex items-center justify-center text-brand-charcoal hover:text-brand-gold hover:border-brand-gold transition-colors">
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -689,14 +679,14 @@
     </div>
   </footer>
 
-  <!-- MODAL LIGHTBOX PARA AMPLIAR AS FOTOS -->
-  <div id="modal-foto" onclick="fecharModalFoto(event)" class="fixed inset-0 z-50 hidden bg-brand-charcoal/85 backdrop-blur-sm flex items-center justify-center p-4">
-    <div onclick="event.stopPropagation()" class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative animate-[fadeIn_0.2s_ease-out]">
+  <!-- MODAL LIGHTBOX PARA AMPLIAR AS FOTOS EM HD -->
+  <div id="modal-foto" onclick="fecharModalFoto()" class="fixed inset-0 z-50 hidden bg-brand-charcoal/85 backdrop-blur-sm flex items-center justify-center p-4">
+    <div onclick="event.stopPropagation()" class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative">
       <button onclick="fecharModalFoto()" aria-label="Fechar foto" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-brand-charcoal/80 text-white hover:bg-brand-charcoal flex items-center justify-center transition-colors">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
       <div class="bg-brand-sand max-h-[72vh] overflow-hidden flex items-center justify-center">
-        <img id="modal-img" src="" alt="" class="w-full h-auto max-h-[72vh] object-contain foto-nitida" />
+        <img id="modal-img" src="" alt="" class="w-full h-auto max-h-[72vh] object-contain" />
       </div>
       <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white">
         <div>
@@ -717,28 +707,28 @@
     <span class="hidden sm:inline text-sm">Falar com Consultora</span>
   </a>
 
-  <!-- SCRIPT CENTRALIZADO -->
+  <!-- SCRIPT CENTRALIZADO COM LINKS HD DIRETOS -->
   <script>
     const IMAGENS = {
-      hero: "https://i.postimg.cc/v4t5tgBm/Captura-de-tela-2026-11-25-160031.jpg",
-      catVestidos: "https://i.postimg.cc/zyrnhSJG/Captura-de-tela-2026-11-25-155912.jpg",
-      catAlfaiataria: "https://i.postimg.cc/tsNFNZTV/Um-conjunto-clean-e-estiloso.jpg",
-      catBlusas: "https://i.postimg.cc/217n7b6y/Captura-de-tela-2026-11-25-160100.jpg",
-      catJeans: "https://i.postimg.cc/nXGqGjzX/Captura-de-tela-2026-11-25-160424.jpg",
+      hero: "https://i.postimg.cc/2SPTmnNn/Captura-de-tela-2026-11-25-160031.jpg",
+      catVestidos: "https://i.postimg.cc/wjtFS0ZL/Captura-de-tela-2026-11-25-155912.jpg",
+      catAlfaiataria: "https://i.postimg.cc/sgtKy5CK/Um-conjunto-clean-e-estiloso.jpg",
+      catBlusas: "https://i.postimg.cc/vZpXM5wr/Captura-de-tela-2026-11-25-160100.jpg",
+      catJeans: "https://i.postimg.cc/W1QSj0cw/Captura-de-tela-2026-11-25-160424.jpg",
       catFitness: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80",
-      lifestyle: "https://i.postimg.cc/mPy7yzDB/Captura-de-tela-2026-11-25-155951.jpg",
+      lifestyle: "https://i.postimg.cc/4xrwZpR7/Captura-de-tela-2026-11-25-155951.jpg",
 
-      produto1: "https://i.postimg.cc/zyrnhSJG/Captura-de-tela-2026-11-25-155912.jpg",
-      produto2: "https://i.postimg.cc/v4t5tgBm/Captura-de-tela-2026-11-25-160031.jpg",
-      produto3: "https://i.postimg.cc/mPy7yzDB/Captura-de-tela-2026-11-25-155951.jpg",
-      produto4: "https://i.postimg.cc/tsNFNZTV/Um-conjunto-clean-e-estiloso.jpg",
-      produto5: "https://i.postimg.cc/0z070MQQ/Captura-de-tela-2026-11-25-160043.jpg",
-      produto6: "https://i.postimg.cc/qNx2xhRB/Captura-de-tela-2026-11-25-160018.jpg",
-      produto7: "https://i.postimg.cc/gxH3HXJr/Captura-de-tela-2026-11-25-160119.jpg",
-      produto8: "https://i.postimg.cc/nXGqGjzX/Captura-de-tela-2026-11-25-160424.jpg",
-      produto9: "https://i.postimg.cc/nXGqGjzH/Captura-de-tela-2026-11-25-160005.jpg",
-      produto10: "https://i.postimg.cc/217n7b6y/Captura-de-tela-2026-11-25-160100.jpg",
-      produto11: "https://i.postimg.cc/217n7b6m/Captura-de-tela-2026-11-25-155928.jpg"
+      produto1: "https://i.postimg.cc/wjtFS0ZL/Captura-de-tela-2026-11-25-155912.jpg",
+      produto2: "https://i.postimg.cc/2SPTmnNn/Captura-de-tela-2026-11-25-160031.jpg",
+      produto3: "https://i.postimg.cc/4xrwZpR7/Captura-de-tela-2026-11-25-155951.jpg",
+      produto4: "https://i.postimg.cc/sgtKy5CK/Um-conjunto-clean-e-estiloso.jpg",
+      produto5: "https://i.postimg.cc/fR65ZYQx/Captura-de-tela-2026-11-25-160043.jpg",
+      produto6: "https://i.postimg.cc/SxwVqcb9/Captura-de-tela-2026-11-25-160018.jpg",
+      produto7: "https://i.postimg.cc/zG9p5TYw/Captura-de-tela-2026-11-25-160119.jpg",
+      produto8: "https://i.postimg.cc/W1QSj0cw/Captura-de-tela-2026-11-25-160424.jpg",
+      produto9: "https://i.postimg.cc/SxwVqcbz/Captura-de-tela-2026-11-25-160005.jpg",
+      produto10: "https://i.postimg.cc/vZpXM5wr/Captura-de-tela-2026-11-25-160100.jpg",
+      produto11: "https://i.postimg.cc/vZpXM5w1/Captura-de-tela-2026-11-25-155928.jpg"
     };
 
     const WHATSAPP_NUMERO = "5533999162686";
@@ -903,7 +893,7 @@
           <article class="group bg-white rounded-2xl border border-brand-sand overflow-hidden shadow-card hover:shadow-soft transition-all duration-300 flex flex-col justify-between">
             <div>
               <div onclick="abrirModalFoto('${produto.imagem}', '${produto.nome.replace(/'/g, "\\'")}', '${produto.descricao.replace(/'/g, "\\'")}')" class="cursor-zoom-in relative aspect-[3/3.8] bg-brand-sand overflow-hidden">
-                <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" class="w-full h-full object-cover object-top foto-nitida" />
+                <img src="${produto.imagem}" alt="${produto.nome}" loading="lazy" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-brand-goldDark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-xs">
                   ${produto.tag}
                 </span>
