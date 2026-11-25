@@ -10,8 +10,8 @@
   <!-- Open Graph / Compartilhamento WhatsApp e Instagram -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Brilhante Caratinga — Referência em Moda Feminina" />
-  <meta property="og:description" content="Para nós, o que importa é você! Confira nossa curadoria de vestidos, alfaiataria, jeans e moda fitness. Atendimento personalizado e delivery em Caratinga/MG." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:description" content="Para nós, o que importa é você! Confira nossa curadoria oficial de vestidos, alfaiataria, jeans e moda fitness. Atendimento personalizado e delivery em Caratinga/MG." />
+  <meta property="og:image" content="https://i.postimg.cc/tsNFNZTV/Um-conjunto-clean-e-estiloso.jpg" />
   <meta property="og:locale" content="pt_BR" />
 
   <!-- Google Fonts: Pareamento Editorial (Cormorant Garamond + Plus Jakarta Sans + Alex Brush) -->
@@ -32,13 +32,13 @@
           },
           colors: {
             brand: {
-              gold: '#B6895B',       // Dourado quente extraído da identidade visual @brilhantecaratinga
-              goldDark: '#966D43',   // Tom mais profundo para hover e contraste acessível (WCAG)
-              goldLight: '#F3EAE1',  // Tom champagne suave para badges e fundos secundários
-              cream: '#FAF7F5',      // Off-white editorial quente
-              sand: '#EFE9E3',       // Bege areia para separações sutis
-              charcoal: '#231F20',   // Preto suave de alto contraste
-              muted: '#665E59',      // Cinza quente para textos de apoio
+              gold: '#B6895B',
+              goldDark: '#966D43',
+              goldLight: '#F3EAE1',
+              cream: '#FAF7F5',
+              sand: '#EFE9E3',
+              charcoal: '#231F20',
+              muted: '#665E59',
             }
           },
           boxShadow: {
@@ -54,7 +54,6 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Refinamentos visuais e barra de rolagem limpa */
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     
@@ -97,8 +96,6 @@
   <!-- CABEÇALHO / NAVBAR -->
   <header class="sticky top-0 z-40 glass-nav border-b border-brand-sand/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-      
-      <!-- Logo Tipográfica + Emblema Circular inspirado no Instagram -->
       <a href="#" class="flex items-center gap-3 group">
         <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-brand-gold/60 bg-white flex items-center justify-center shadow-sm group-hover:border-brand-gold transition-colors">
           <span class="font-serif font-bold text-brand-gold text-lg tracking-tighter">B</span>
@@ -109,16 +106,14 @@
         </div>
       </a>
 
-      <!-- Navegação Desktop -->
       <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-brand-charcoal/85">
         <a href="#categorias" class="hover:text-brand-gold transition-colors">Categorias</a>
-        <a href="#vitrine" class="hover:text-brand-gold transition-colors">Destaques</a>
+        <a href="#vitrine" class="hover:text-brand-gold transition-colors">Catálogo Oficial</a>
         <a href="#sobre" class="hover:text-brand-gold transition-colors">Nossa Essência</a>
         <a href="#avaliacoes" class="hover:text-brand-gold transition-colors">Avaliações</a>
         <a href="#localizacao" class="hover:text-brand-gold transition-colors">Loja & Horários</a>
       </nav>
 
-      <!-- Ações Direitas -->
       <div class="flex items-center gap-2.5 sm:gap-4">
         <a href="https://instagram.com/brilhantecaratinga" target="_blank" rel="noopener noreferrer" aria-label="Instagram Brilhante Caratinga" class="p-2 text-brand-charcoal/80 hover:text-brand-gold transition-colors">
           <i data-lucide="instagram" class="w-5 h-5"></i>
@@ -131,14 +126,12 @@
     </div>
   </header>
 
-  <!-- DOBRA 1: HERO SECTION (MOBILE-FIRST & ASSIMÉTRICO COMO A REFERÊNCIA) -->
+  <!-- DOBRA 1: HERO SECTION -->
   <section class="relative overflow-hidden bg-gradient-to-b from-brand-sand/50 via-brand-cream to-brand-cream pt-6 pb-12 sm:pt-12 sm:pb-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
         
-        <!-- Coluna Esquerda: Copy Editorial + Provas de Autoridade + CTAs -->
         <div class="lg:col-span-6 space-y-5 sm:space-y-6 text-left z-10">
-          <!-- Badge de Autoridade Google + Instagram -->
           <div class="inline-flex items-center gap-2 bg-white border border-brand-gold/25 px-3.5 py-1.5 rounded-full shadow-xs">
             <span class="flex text-amber-400">
               <i data-lucide="star" class="w-3.5 h-3.5 fill-amber-400"></i>
@@ -161,7 +154,6 @@
             Para nós, o que importa é você! Curadoria atemporal em vestidos, alfaiataria, jeans e moda fitness com atendimento próximo e entrega rápida na sua casa.
           </p>
 
-          <!-- Botões de Conversão -->
           <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
             <a href="#" data-wa-default class="inline-flex items-center justify-center gap-2.5 bg-brand-gold hover:bg-brand-goldDark text-white font-semibold px-7 py-3.5 rounded-full shadow-md transition-all hover:-translate-y-0.5 text-sm sm:text-base">
               <span>Chamar no WhatsApp</span>
@@ -172,7 +164,6 @@
             </a>
           </div>
 
-          <!-- 3 Pilares Inferiores (Reproduzindo os 3 ícones da Hero de referência) -->
           <div class="grid grid-cols-3 gap-3 pt-4 sm:pt-6 border-t border-brand-charcoal/10 max-w-lg">
             <div class="flex items-start gap-2.5">
               <div class="p-2 rounded-lg bg-brand-goldLight text-brand-goldDark shrink-0">
@@ -195,15 +186,12 @@
           </div>
         </div>
 
-        <!-- Coluna Direita: Imagem Editorial + Selos Flutuantes (Estilo Aurora Reference) -->
         <div class="lg:col-span-6 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- Moldura Principal -->
             <div class="relative rounded-2xl overflow-hidden shadow-soft aspect-[4/4.6] sm:aspect-[4/4.3] bg-brand-sand">
               <img id="img-hero" src="" alt="Moda Feminina Brilhante Caratinga" class="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" />
               <div class="absolute inset-0 bg-gradient-to-t from-brand-charcoal/40 via-transparent to-transparent"></div>
               
-              <!-- Legenda discreta inferior na foto -->
               <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
                 <div class="bg-brand-charcoal/70 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15">
                   <p class="text-[11px] uppercase tracking-widest text-brand-goldLight font-semibold">Nova Curadoria</p>
@@ -212,13 +200,11 @@
               </div>
             </div>
 
-            <!-- Selo Tipográfico Flutuante Superior Direito (Como "AUTUMN COLLECTION" na referência) -->
             <div class="hidden sm:block absolute -top-3 -right-3 bg-white/95 backdrop-blur-sm border border-brand-gold/30 px-4 py-3 rounded-xl shadow-card text-right">
               <p class="text-[10px] tracking-[0.22em] uppercase text-brand-goldDark font-bold">Coleção Oficial</p>
               <p class="font-serif text-lg font-semibold text-brand-charcoal">Brilhante</p>
             </div>
 
-            <!-- Assinatura Manuscrita Flutuante (Como "New Beginnings New Styles" na referência) -->
             <div class="hidden sm:block absolute bottom-14 -left-8 bg-brand-cream/95 backdrop-blur-sm px-5 py-2.5 rounded-xl border border-brand-gold/25 shadow-card -rotate-3">
               <p class="font-script text-3xl text-brand-goldDark leading-none">Para nós, o que</p>
               <p class="font-script text-3xl text-brand-charcoal leading-none pl-4">importa é você!</p>
@@ -230,7 +216,7 @@
     </div>
   </section>
 
-  <!-- DOBRA 2: ENCONTRE SEU ESTILO (CATEGORIAS EM CARDS VERTICAIS COMO A REFERÊNCIA) -->
+  <!-- DOBRA 2: ENCONTRE SEU ESTILO -->
   <section id="categorias" class="py-12 sm:py-16 bg-white border-y border-brand-sand/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3">
@@ -244,13 +230,10 @@
         </a>
       </div>
 
-      <!-- Grid de 5 Categorias Principais da Loja -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
-        <!-- Categoria 1: Vestidos -->
         <button onclick="filtrarCategoria('Vestidos')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
             <img id="img-cat-vestidos" src="" alt="Vestidos Brilhante Caratinga" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
           </div>
           <div class="flex items-center justify-between px-0.5">
             <span class="font-medium text-sm sm:text-base text-brand-charcoal group-hover:text-brand-goldDark transition-colors">Vestidos</span>
@@ -258,7 +241,6 @@
           </div>
         </button>
 
-        <!-- Categoria 2: Conjuntos & Alfaiataria -->
         <button onclick="filtrarCategoria('Alfaiataria')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
             <img id="img-cat-alfaiataria" src="" alt="Conjuntos e Alfaiataria" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
@@ -269,7 +251,6 @@
           </div>
         </button>
 
-        <!-- Categoria 3: Blusas & Tricôs -->
         <button onclick="filtrarCategoria('Blusas')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
             <img id="img-cat-blusas" src="" alt="Blusas Femininas" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
@@ -280,7 +261,6 @@
           </div>
         </button>
 
-        <!-- Categoria 4: Jeans -->
         <button onclick="filtrarCategoria('Jeans')" class="group text-left focus:outline-none">
           <div class="rounded-xl overflow-hidden aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
             <img id="img-cat-jeans" src="" alt="Jeans Feminino" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
@@ -291,7 +271,6 @@
           </div>
         </button>
 
-        <!-- Categoria 5: Linha Fitness -->
         <a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener noreferrer" class="group text-left col-span-2 sm:col-span-1">
           <div class="rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[3/4] bg-brand-sand mb-3 relative shadow-xs">
             <img id="img-cat-fitness" src="" alt="Brilhante Fitness" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
@@ -308,23 +287,22 @@
     </div>
   </section>
 
-  <!-- DOBRA 3: VITRINE DE PRODUTOS REAIS (BASEADA NAS FOTOS ANEXADAS) -->
+  <!-- DOBRA 3: VITRINE OFICIAL (11 LOOKS REAIS COM AS FOTOS OFICIAIS) -->
   <section id="vitrine" class="py-14 sm:py-20 bg-brand-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Cabeçalho da Seção + Filtros Rápidos -->
       <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">Curadoria Selecionada</span>
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">Curadoria Oficial</span>
         <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-charcoal mt-1">Os Favoritos da Loja</h2>
         <p class="text-brand-muted text-sm sm:text-base mt-2">
           Clique na peça desejada para consultar tamanhos disponíveis e reservar diretamente pelo WhatsApp com nossa equipe.
         </p>
       </div>
 
-      <!-- Abas de Filtro por Categoria -->
+      <!-- Abas de Filtro -->
       <div id="filtros-container" class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar pb-4 mb-6">
         <button data-filter="Todos" class="filter-btn active px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-brand-gold text-white shadow-xs shrink-0">
-          Todos os Looks
+          Todos os Looks (11)
         </button>
         <button data-filter="Vestidos" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
           Vestidos
@@ -333,19 +311,17 @@
           Conjuntos & Alfaiataria
         </button>
         <button data-filter="Jeans" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
-          Jeans
+          Jeans & Combos
         </button>
         <button data-filter="Blusas" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-brand-charcoal hover:bg-brand-goldLight shrink-0 border border-brand-sand">
           Blusas
         </button>
       </div>
 
-      <!-- Grade de Produtos (4 colunas desktop, 2 colunas mobile) -->
-      <div id="grid-produtos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Os cards serão renderizados via JavaScript limpo usando os dados reais das fotos anexadas -->
-      </div>
+      <!-- Grade de Produtos -->
+      <div id="grid-produtos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
 
-      <!-- Banner Intermediário Linha Fitness (@brilhantefitness) -->
+      <!-- Banner Intermediário Linha Fitness -->
       <div class="mt-14 rounded-2xl bg-white border border-brand-gold/25 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-card">
         <div class="flex items-center gap-4 text-left">
           <div class="w-14 h-14 rounded-2xl bg-brand-goldLight flex items-center justify-center text-brand-goldDark shrink-0">
@@ -371,15 +347,14 @@
     </div>
   </section>
 
-  <!-- DOBRA 4: ESSÊNCIA DA MARCA + FAIXA DE MÉTRICAS (FIEL À ARQUITETURA DA REFERÊNCIA) -->
+  <!-- DOBRA 4: ESSÊNCIA DA MARCA + MÉTRICAS -->
   <section id="sobre" class="bg-white pt-14 sm:pt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-14 sm:pb-20">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- Imagem Lifestyle Esquerda -->
         <div class="lg:col-span-6 relative">
-          <div class="rounded-2xl overflow-hidden aspect-[4/3.4] bg-brand-sand shadow-soft relative">
-            <img id="img-lifestyle" src="" alt="Atendimento Brilhante Caratinga" class="w-full h-full object-cover" />
+          <div class="rounded-2xl overflow-hidden aspect-[4/4.2] bg-brand-sand shadow-soft relative">
+            <img id="img-lifestyle" src="" alt="Atendimento Brilhante Caratinga" class="w-full h-full object-cover object-top" />
             <div class="absolute inset-0 bg-gradient-to-tr from-brand-charcoal/45 via-transparent to-transparent"></div>
             <div class="absolute bottom-6 left-6 text-white">
               <p class="font-script text-4xl sm:text-5xl text-white drop-shadow-sm">Autêntica, Elegante & Você</p>
@@ -387,7 +362,6 @@
           </div>
         </div>
 
-        <!-- Texto Institucional Direita -->
         <div class="lg:col-span-6 space-y-5">
           <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">Mais Que Moda, Um Estilo de Vida</span>
           <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-charcoal leading-tight">
@@ -397,7 +371,6 @@
             Desde 2020 no coração de Caratinga, sob a liderança de <strong>Daiane Stefanon e equipe</strong>, a Brilhante nasceu com um propósito claro: unir tendências atuais, caimento impecável e um atendimento acolhedor que faz cada cliente se sentir única.
           </p>
 
-          <!-- 4 Ícones de Infraestrutura e Facilidades (Como na seção "It's a Lifestyle" da referência) -->
           <div class="grid grid-cols-2 gap-4 pt-3">
             <div class="flex items-start gap-3 p-3.5 rounded-xl bg-brand-cream border border-brand-sand">
               <i data-lucide="bike" class="w-5 h-5 text-brand-goldDark shrink-0 mt-0.5"></i>
@@ -436,7 +409,6 @@
       </div>
     </div>
 
-    <!-- Faixa de Métricas (Reproduzindo a barra dourada/verde da referência) -->
     <div class="bg-brand-gold text-white py-10 sm:py-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y sm:divide-y-0 sm:divide-x divide-white/20">
@@ -461,12 +433,11 @@
     </div>
   </section>
 
-  <!-- DOBRA 5: PROVA SOCIAL / AVALIAÇÕES DO GOOGLE (COMO "LOVED BY MODERN WOMEN" DA REFERÊNCIA) -->
+  <!-- DOBRA 5: PROVA SOCIAL / AVALIAÇÕES DO GOOGLE -->
   <section id="avaliacoes" class="py-14 sm:py-20 bg-brand-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        <!-- Título Lateral Esquerdo -->
         <div class="lg:col-span-4 space-y-3">
           <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-goldDark">O Que Dizem Nossas Clientes</span>
           <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-charcoal leading-tight">
@@ -483,9 +454,7 @@
           </div>
         </div>
 
-        <!-- Cards de Depoimentos Direita -->
         <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <!-- Depoimento 1 -->
           <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-card flex flex-col justify-between">
             <div>
               <div class="flex text-amber-400 mb-3">
@@ -508,7 +477,6 @@
             </div>
           </div>
 
-          <!-- Depoimento 2 -->
           <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-card flex flex-col justify-between">
             <div>
               <div class="flex text-amber-400 mb-3">
@@ -531,7 +499,6 @@
             </div>
           </div>
 
-          <!-- Depoimento 3 -->
           <div class="bg-white p-6 rounded-2xl border border-brand-sand shadow-card flex flex-col justify-between">
             <div>
               <div class="flex text-amber-400 mb-3">
@@ -559,11 +526,10 @@
     </div>
   </section>
 
-  <!-- DOBRA 6: LOCALIZAÇÃO, HORÁRIOS E CONVERSÃO PRESENCIAL/ONLINE -->
+  <!-- DOBRA 6: LOCALIZAÇÃO E HORÁRIOS -->
   <section id="localizacao" class="py-14 sm:py-20 bg-white border-t border-brand-sand">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Banner CTA Dourado (Reproduzindo a barra arredondada inferior da referência) -->
       <div class="rounded-3xl bg-brand-gold text-white p-7 sm:p-10 mb-12 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-soft">
         <div class="text-center lg:text-left max-w-xl">
           <h2 class="font-serif text-3xl sm:text-4xl font-semibold">Quer ver as novidades no seu tamanho?</h2>
@@ -583,9 +549,7 @@
         </div>
       </div>
 
-      <!-- Cards de Endereço, Horário Loja Física e Horário Online/Delivery -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card Endereço -->
         <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sand">
           <div class="w-10 h-10 rounded-xl bg-brand-goldLight text-brand-goldDark flex items-center justify-center mb-4">
             <i data-lucide="map-pin" class="w-5 h-5"></i>
@@ -599,7 +563,6 @@
           </a>
         </div>
 
-        <!-- Card Horário Loja Física -->
         <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sand">
           <div class="w-10 h-10 rounded-xl bg-brand-goldLight text-brand-goldDark flex items-center justify-center mb-4">
             <i data-lucide="store" class="w-5 h-5"></i>
@@ -621,7 +584,6 @@
           </ul>
         </div>
 
-        <!-- Card Atendimento Online & Delivery -->
         <div class="p-6 rounded-2xl bg-brand-cream border border-brand-sand">
           <div class="w-10 h-10 rounded-xl bg-brand-goldLight text-brand-goldDark flex items-center justify-center mb-4">
             <i data-lucide="truck" class="w-5 h-5"></i>
@@ -647,12 +609,11 @@
     </div>
   </section>
 
-  <!-- RODAPÉ INSTITUCIONAL (4 COLUNAS COMO A REFERÊNCIA) -->
+  <!-- RODAPÉ INSTITUCIONAL -->
   <footer class="bg-brand-cream border-t border-brand-sand pt-12 pb-24 sm:pb-12 text-sm text-brand-muted">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-brand-charcoal/10">
         
-        <!-- Coluna 1: Marca -->
         <div class="space-y-3">
           <span class="font-serif text-2xl font-bold tracking-[0.14em] text-brand-charcoal uppercase block">Brilhante</span>
           <p class="text-xs leading-relaxed">
@@ -671,19 +632,17 @@
           </div>
         </div>
 
-        <!-- Coluna 2: Coleções -->
         <div>
           <h4 class="font-semibold text-brand-charcoal mb-3">Categorias</h4>
           <ul class="space-y-2 text-xs">
             <li><a href="#vitrine" onclick="filtrarCategoria('Vestidos')" class="hover:text-brand-gold transition-colors">Vestidos Casuais & Festa</a></li>
             <li><a href="#vitrine" onclick="filtrarCategoria('Alfaiataria')" class="hover:text-brand-gold transition-colors">Conjuntos & Alfaiataria</a></li>
-            <li><a href="#vitrine" onclick="filtrarCategoria('Jeans')" class="hover:text-brand-gold transition-colors">Jeans & All Jeans</a></li>
+            <li><a href="#vitrine" onclick="filtrarCategoria('Jeans')" class="hover:text-brand-gold transition-colors">Jeans & Combos</a></li>
             <li><a href="#vitrine" onclick="filtrarCategoria('Blusas')" class="hover:text-brand-gold transition-colors">Blusas & Tops</a></li>
             <li><a href="https://instagram.com/brilhantefitness" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors">Linha Fitness (@brilhantefitness)</a></li>
           </ul>
         </div>
 
-        <!-- Coluna 3: Atendimento -->
         <div>
           <h4 class="font-semibold text-brand-charcoal mb-3">Atendimento</h4>
           <ul class="space-y-2 text-xs">
@@ -694,7 +653,6 @@
           </ul>
         </div>
 
-        <!-- Coluna 4: Facilidades & Dados Cadastrais -->
         <div>
           <h4 class="font-semibold text-brand-charcoal mb-3">Formas de Pagamento</h4>
           <div class="flex flex-wrap gap-2 text-xs font-medium text-brand-charcoal mb-4">
@@ -718,55 +676,43 @@
     </div>
   </footer>
 
-  <!-- BOTÃO FLUTUANTE FIXO WHATSAPP (CANTO INFERIOR DIREITO) -->
+  <!-- BOTÃO FLUTUANTE FIXO WHATSAPP -->
   <a href="#" data-wa-default aria-label="Falar com a Brilhante Caratinga no WhatsApp" class="whatsapp-pulse fixed bottom-5 right-5 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-4 py-3.5 sm:px-5 rounded-full shadow-lg transition-transform hover:scale-105">
     <i data-lucide="message-circle" class="w-6 h-6 fill-white text-[#25D366]"></i>
     <span class="hidden sm:inline text-sm">Falar com Consultora</span>
   </a>
 
-  <!-- SCRIPT CENTRALIZADO: IMAGENS, CATÁLOGO E CONVERSÃO WHATSAPP -->
+  <!-- SCRIPT CENTRALIZADO COM TODAS AS FOTOS OFICIAIS DA LOJA -->
   <script>
-    /**
-     * =========================================================================
-     * CENTRAL DE IMAGENS DA LOJA BRILHANTE CARATINGA
-     * Substitua os links Unsplash abaixo pelas URLs diretas das fotos reais
-     * enviadas no chat sempre que desejar.
-     * =========================================================================
-     */
     const IMAGENS = {
-      // Foto de destaque da primeira dobra (Hero) -> Pode usar a foto do Conjunto Alfaiataria Oliva (image_8e031f.jpg)
-      hero: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85",
+      // Hero (Destaque principal da primeira dobra - Conjunto Alfaiataria Oliva)
+      hero: "https://i.postimg.cc/v4t5tgBm/Captura-de-tela-2026-11-25-160031.jpg",
 
-      // Imagens das Categorias
-      catVestidos: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80",
-      catAlfaiataria: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=600&q=80",
-      catBlusas: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=600&q=80",
-      catJeans: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80",
+      // Capas das 5 Categorias
+      catVestidos: "https://i.postimg.cc/zyrnhSJG/Captura-de-tela-2026-11-25-155912.jpg",
+      catAlfaiataria: "https://i.postimg.cc/tsNFNZTV/Um-conjunto-clean-e-estiloso.jpg",
+      catBlusas: "https://i.postimg.cc/217n7b6y/Captura-de-tela-2026-11-25-160100.jpg",
+      catJeans: "https://i.postimg.cc/nXGqGjzX/Captura-de-tela-2026-11-25-160424.jpg",
       catFitness: "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=600&q=80",
 
       // Foto Institucional ("Mais Que Moda, Um Estilo de Vida")
-      lifestyle: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
+      lifestyle: "https://i.postimg.cc/mPy7yzDB/Captura-de-tela-2026-11-25-155951.jpg",
 
-      // FOTOS DOS PRODUTOS REAIS ANEXADOS NO CHAT:
-      // 1. image_8dffbc.jpg -> Vestido Longo Frente Única Floral Azul Marinho
-      produto1: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=700&q=80",
-      // 2. image_8e0000.jpg -> Conjunto Linho Off-White com Bordado Floral Azul (Peplum + Pantalona)
-      produto2: "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=700&q=80",
-      // 3. image_8e031f.jpg -> Conjunto Alfaiataria Oliva/Cáqui (Colete Botões + Calça Pantalona)
-      produto3: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80",
-      // 4. image_8e0328.jpg -> Vestido Longo Off-White Poá Marrom Três Marias
-      produto4: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80",
-      // 5. image_8e0075.jpg -> Vestido Curto Floral Solar Azul Marinho
-      produto5: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=700&q=80",
-      // 6. image_8e001e.jpg -> Blusa Frente Única Rosa Bebê Texturizada + Jeans Wide Leg
-      produto6: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=700&q=80",
-      // 7. image_8e0361.jpg -> Blusa Frente Única Gola Degagê Marrom Cacau
-      produto7: "https://images.unsplash.com/photo-1564257631407-4deb1f99d992?auto=format&fit=crop&w=700&q=80",
-      // 8. image_8dffdf.jpg -> Blusa Básica Cap Sleeve Marrom Café + Bermuda Jeans
-      produto8: "https://images.unsplash.com/photo-1582418702059-97ebafb35d09?auto=format&fit=crop&w=700&q=80"
+      // FOTOS OFICIAIS DOS PRODUTOS
+      produto1: "https://i.postimg.cc/zyrnhSJG/Captura-de-tela-2026-11-25-155912.jpg",
+      produto2: "https://i.postimg.cc/v4t5tgBm/Captura-de-tela-2026-11-25-160031.jpg",
+      produto3: "https://i.postimg.cc/mPy7yzDB/Captura-de-tela-2026-11-25-155951.jpg",
+      produto4: "https://i.postimg.cc/tsNFNZTV/Um-conjunto-clean-e-estiloso.jpg",
+      produto5: "https://i.postimg.cc/0z070MQQ/Captura-de-tela-2026-11-25-160043.jpg",
+      produto6: "https://i.postimg.cc/qNx2xhRB/Captura-de-tela-2026-11-25-160018.jpg",
+      produto7: "https://i.postimg.cc/gxH3HXJr/Captura-de-tela-2026-11-25-160119.jpg",
+      produto8: "https://i.postimg.cc/nXGqGjzX/Captura-de-tela-2026-11-25-160424.jpg",
+      produto9: "https://i.postimg.cc/nXGqGjzH/Captura-de-tela-2026-11-25-160005.jpg",
+      produto10: "https://i.postimg.cc/217n7b6y/Captura-de-tela-2026-11-25-160100.jpg",
+      produto11: "https://i.postimg.cc/217n7b6m/Captura-de-tela-2026-11-25-155928.jpg",
+      produto12: "https://i.postimg.cc/nXGqGjzs/Captura-de-tela-2026-11-25-160436.jpg"
     };
 
-    // Configuração Oficial do WhatsApp
     const WHATSAPP_NUMERO = "5533999162686";
     const MENSAGEM_PADRAO = "Olá! Vim pelo site da Brilhante Caratinga e gostaria de ver as novidades disponíveis.";
 
@@ -774,7 +720,6 @@
       return `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
     }
 
-    // Catálogo estruturado fielmente a partir das 8 fotos de produtos enviadas
     const PRODUTOS = [
       {
         id: 1,
@@ -786,63 +731,86 @@
       },
       {
         id: 2,
-        nome: "Conjunto Linho Off-White Bordado Azul",
-        categoria: "Alfaiataria",
-        tag: "Destaque",
-        descricao: "Top tomara-que-caia peplum com calça pantalona fluida e bordados florais na barra.",
-        imagem: IMAGENS.produto2
-      },
-      {
-        id: 3,
         nome: "Conjunto Alfaiataria Oliva Colete & Pantalona",
         categoria: "Alfaiataria",
         tag: "Mais Pedido",
         descricao: "Colete estruturado com gola e botões frontais acompanhado de calça pantalona de corte impecável.",
+        imagem: IMAGENS.produto2
+      },
+      {
+        id: 3,
+        nome: "Conjunto Linho Off-White Bordado Azul",
+        categoria: "Alfaiataria",
+        tag: "Destaque",
+        descricao: "Top tomara-que-caia peplum com calça pantalona fluida e bordados florais na barra.",
         imagem: IMAGENS.produto3
       },
       {
         id: 4,
-        nome: "Vestido Longo Off-White Poá Marrom",
-        categoria: "Vestidos",
-        tag: "Atemporal",
-        descricao: "Alças finas, lastex nas costas para ajuste perfeito e saia fluida em camadas três marias.",
+        nome: "Conjunto Clean & Estiloso Alfaiataria",
+        categoria: "Alfaiataria",
+        tag: "Exclusivo",
+        descricao: "Composição moderna e versátil com caimento impecável para o dia a dia ou trabalho.",
         imagem: IMAGENS.produto4
       },
       {
         id: 5,
-        nome: "Vestido Curto Floral Solar Marinho",
+        nome: "Vestido Longo Off-White Poá Marrom",
         categoria: "Vestidos",
-        tag: "Leve & Fresco",
-        descricao: "Alcinhas delicadas, caimento soltinho em três marias e estampa floral vibrante.",
+        tag: "Atemporal",
+        descricao: "Alças finas, lastex nas costas para ajuste perfeito e saia fluida em camadas três marias.",
         imagem: IMAGENS.produto5
       },
       {
         id: 6,
-        nome: "Combo Blusa Texturizada Rosa + Wide Leg Jeans",
-        categoria: "Jeans",
-        tag: "Look Completo",
-        descricao: "Blusa frente única em textura delicada combinada com calça jeans wide leg de cintura alta.",
+        nome: "Vestido Curto Floral Solar Marinho",
+        categoria: "Vestidos",
+        tag: "Leve & Fresco",
+        descricao: "Alcinhas delicadas, caimento soltinho em três marias e estampa floral vibrante.",
         imagem: IMAGENS.produto6
       },
       {
         id: 7,
-        nome: "Blusa Frente Única Gola Degagê Cacau",
-        categoria: "Blusas",
-        tag: "Versátil",
-        descricao: "Tecido texturizado sofisticado no tom marrom cacau, ideal para compor looks do trabalho ao jantar.",
+        nome: "Combo Blusa Gola Alta + Saia Jeans Cargo Preta",
+        categoria: "Jeans",
+        tag: "All Black",
+        descricao: "Blusa sem mangas com drapeado lateral e saia jeans preta moderna com bolsos utilitários.",
         imagem: IMAGENS.produto7
       },
       {
         id: 8,
+        nome: "Combo Tomara-que-Caia Menta + Jeans Wide Leg",
+        categoria: "Jeans",
+        tag: "Novidade",
+        descricao: "Blusa fluida verde menta combinada com calça jeans wide leg de lavagem média e cintura alta.",
+        imagem: IMAGENS.produto8
+      },
+      {
+        id: 9,
+        nome: "Combo Blusa Texturizada Rosa + Wide Leg Jeans",
+        categoria: "Jeans",
+        tag: "Look Completo",
+        descricao: "Blusa frente única em textura delicada rosa bebê com calça jeans wide leg de caimento reto.",
+        imagem: IMAGENS.produto9
+      },
+      {
+        id: 10,
+        nome: "Blusa Frente Única Gola Degagê Cacau",
+        categoria: "Blusas",
+        tag: "Versátil",
+        descricao: "Tecido texturizado sofisticado no tom marrom cacau, ideal do escritório ao jantar.",
+        imagem: IMAGENS.produto10
+      },
+      {
+        id: 11,
         nome: "Combo Blusa Cap Sleeve Café + Bermuda Jeans",
         categoria: "Jeans",
         tag: "Tendência",
         descricao: "Blusa básica ajustada em marrom café com bermuda jeans moderna de barra desfiada.",
-        imagem: IMAGENS.produto8
+        imagem: IMAGENS.produto11
       }
     ];
 
-    // Preenche as imagens fixas da página
     document.getElementById("img-hero").src = IMAGENS.hero;
     document.getElementById("img-cat-vestidos").src = IMAGENS.catVestidos;
     document.getElementById("img-cat-alfaiataria").src = IMAGENS.catAlfaiataria;
@@ -851,7 +819,6 @@
     document.getElementById("img-cat-fitness").src = IMAGENS.catFitness;
     document.getElementById("img-lifestyle").src = IMAGENS.lifestyle;
 
-    // Atualiza links globais de WhatsApp
     document.querySelectorAll("[data-wa-default]").forEach(el => {
       el.href = gerarLinkWhatsApp(MENSAGEM_PADRAO);
       el.target = "_blank";
@@ -864,7 +831,6 @@
       el.rel = "noopener noreferrer";
     });
 
-    // Renderiza os cards da vitrine
     const gridProdutos = document.getElementById("grid-produtos");
 
     function renderizarProdutos(categoriaSelecionada = "Todos") {
@@ -908,7 +874,6 @@
       lucide.createIcons();
     }
 
-    // Controle dos botões de filtro
     function filtrarCategoria(categoria) {
       document.querySelectorAll(".filter-btn").forEach(btn => {
         const ativo = btn.getAttribute("data-filter") === categoria;
@@ -933,7 +898,6 @@
       });
     });
 
-    // Inicialização
     document.getElementById("ano-atual").textContent = new Date().getFullYear();
     renderizarProdutos("Todos");
     lucide.createIcons();
